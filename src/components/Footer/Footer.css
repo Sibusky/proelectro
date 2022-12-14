@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 20px;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc((1140 / 1280) * 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.footer__copyright {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-rendering: optimizeLegibility;
+  color: #2e3d41;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contacts {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contacts-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contacts-list-item {
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 10px;
+  padding: 0;
+}

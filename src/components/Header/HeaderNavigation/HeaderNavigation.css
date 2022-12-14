@@ -1,0 +1,36 @@
+.navigation {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list-item {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.navigation__link {
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-rendering: optimizeLegibility;
+    text-decoration: none;
+    color: #2E3D41;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation__link_active {
+    border-bottom: 2px solid #2E3D41;
+}
