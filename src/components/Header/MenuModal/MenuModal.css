@@ -1,0 +1,50 @@
+.menu {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.7s, opacity ease 0.7s;
+  z-index: 1;
+}
+
+.menu_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+  width: 520px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -520px;
+  transition: transform 0.7s;
+  z-index: 1;
+}
+
+.menu__content_opened {
+  transform: translateX(-520px);
+}
+
+.menu__close-btn {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  top: 60px;
+  right: 35px;
+  margin: 0;
+  padding: 0;
+}

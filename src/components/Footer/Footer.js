@@ -9,11 +9,11 @@ export default function Footer() {
         <nav className='footer__contacts'>
           <ul className='footer__contacts-list'>
             <li className='footer__contacts-list-item link'>
-              <a class='footer__telegram-link' href='https://t.me/sibusky' target='_blank' rel="noreferrer">
+              <a className='footer__telegram-link' href='https://t.me/sibusky' target='_blank' rel="noreferrer">
                 <svg
                   role='img'
-                  fill-rule='evenodd'
-                  clip-rule='evenodd'
+                  fillRule='evenodd'
+                  clipRule='evenodd'
                   fill='#3f5359'
                   viewBox='0 0 24 24'
                   xmlns='http://www.w3.org/2000/svg'
@@ -23,12 +23,12 @@ export default function Footer() {
               </a>
             </li>
             <li className='footer__contacts-list-item link'>
-              <a class='footer__vk-link' href='https://vk.com/vol_electro' target='_blank' rel="noreferrer">
+              <a className='footer__vk-link' href='https://vk.com/vol_electro' target='_blank' rel="noreferrer">
                 <svg
                   role='img'
                   viewBox='0 0 24 24'
-                  fill-rule='evenodd'
-                  clip-rule='evenodd'
+                  fillRule='evenodd'
+                  clipRule='evenodd'
                   fill='#3f5359'
                   xmlns='http://www.w3.org/2000/svg'
                 >
@@ -37,12 +37,12 @@ export default function Footer() {
               </a>
             </li>
             <li className='footer__contacts-list-item link'>
-              <a class='footer__gmail-link' href='mailto:5325388@gmail.com' target='_blank' rel="noreferrer">
+              <a className='footer__gmail-link' href='mailto:5325388@gmail.com' target='_blank' rel="noreferrer">
                 <svg
                   role='img'
                   viewBox='0 0 24 24'
-                  fill-rule='evenodd'
-                  clip-rule='evenodd'
+                  fillRule='evenodd'
+                  clipRule='evenodd'
                   fill='#3f5359'
                   xmlns='http://www.w3.org/2000/svg'
                 >

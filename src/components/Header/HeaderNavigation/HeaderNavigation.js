@@ -2,12 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './HeaderNavigation.css';
 
-export default function HeaderNavigation() {
+export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
   return (
     <nav className='navigation'>
-      <ul className='navigation__list'>
-        <li className='navigation__list-item'>
-          <NavLink
+      <ul className={windowSize < 880 ? 'navigation__list navigation__list_menu' : 'navigation__list'}>
+        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
+          <NavLink 
             to='/'
             className={({ isActive }) =>
               isActive
@@ -18,7 +18,7 @@ export default function HeaderNavigation() {
             Инфо
           </NavLink>
         </li>
-        <li className='navigation__list-item'>
+        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
           <NavLink
             to='/projects'
             className={({ isActive }) =>
@@ -30,7 +30,7 @@ export default function HeaderNavigation() {
             Проекты
           </NavLink>
         </li>
-        <li className='navigation__list-item'>
+        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
           <NavLink
             to='/references'
             className={({ isActive }) =>
@@ -42,7 +42,7 @@ export default function HeaderNavigation() {
             Отзывы
           </NavLink>
         </li>
-        <li className='navigation__list-item'>
+        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
           <NavLink
             to='/prices'
             className={({ isActive }) =>
@@ -54,7 +54,7 @@ export default function HeaderNavigation() {
             Цены
           </NavLink>
         </li>
-        <li className='navigation__list-item'>
+        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
           <NavLink
             to='/videos'
             className={({ isActive }) =>
@@ -66,7 +66,7 @@ export default function HeaderNavigation() {
             Видео
           </NavLink>
         </li>
-        <li className='navigation__list-item'>
+        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
           <NavLink
             to='/contacts'
             className={({ isActive }) =>

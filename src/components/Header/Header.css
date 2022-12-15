@@ -11,7 +11,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     width: calc((1140 / 1280) *100%);
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu-btn {
+    position: absolute;
+    top: 37px;
+    right: -12px;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
 }
