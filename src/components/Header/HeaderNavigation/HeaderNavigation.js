@@ -6,7 +6,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
   return (
     <nav className='navigation'>
       <ul className={windowSize < 880 ? 'navigation__list navigation__list_menu' : 'navigation__list'}>
-        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
+        <li className='navigation__list-item' onClick={() =>  windowSize < 880 && setIsMenuOpen(false)}>
           <NavLink 
             to='/'
             className={({ isActive }) =>
@@ -18,7 +18,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
             Инфо
           </NavLink>
         </li>
-        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
+        <li className='navigation__list-item' onClick={() => windowSize < 880 && setIsMenuOpen(false)}>
           <NavLink
             to='/projects'
             className={({ isActive }) =>
@@ -30,7 +30,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
             Проекты
           </NavLink>
         </li>
-        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
+        <li className='navigation__list-item' onClick={() => windowSize < 880 && setIsMenuOpen(false)}>
           <NavLink
             to='/references'
             className={({ isActive }) =>
@@ -42,7 +42,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
             Отзывы
           </NavLink>
         </li>
-        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
+        <li className='navigation__list-item' onClick={() => windowSize < 880 && setIsMenuOpen(false)}>
           <NavLink
             to='/prices'
             className={({ isActive }) =>
@@ -54,7 +54,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
             Цены
           </NavLink>
         </li>
-        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
+        <li className='navigation__list-item' onClick={() => windowSize < 880 && setIsMenuOpen(false)}>
           <NavLink
             to='/videos'
             className={({ isActive }) =>
@@ -66,7 +66,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
             Видео
           </NavLink>
         </li>
-        <li className='navigation__list-item' onClick={() => setIsMenuOpen(false)}>
+        <li className='navigation__list-item' onClick={() => windowSize < 880 && setIsMenuOpen(false)}>
           <NavLink
             to='/contacts'
             className={({ isActive }) =>
