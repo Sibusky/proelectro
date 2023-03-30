@@ -12,8 +12,8 @@ export default function Header({ windowSize }) {
   };
 
   return (
-    <header className='header'>
-      <div className='header__container'>
+    <header className='header section'>
+      <div className='header__container section__container'>
         <Logo />
         {windowSize > 880 ? (
           <HeaderNavigation />

@@ -1,8 +1,23 @@
-.App {
-  background-color: #E5E5E5;
-  min-width: 300px;
+.page {
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 320px;
   max-width: 100%;
   margin: 0 auto;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
 }
 
 /* Общие стили для переиспользуемых элементов  */
@@ -30,34 +45,89 @@
   opacity: 0.6;
 }
 
-/* .section-title {
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.section__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 20px 0 20px 0;
+  width: 1280px;
+}
+@media screen and (max-width: 1300px) {
+  .section__container {
+    width: 90%;
+  }
+}
+/* @media screen and (max-width: 1200px) {
+  .section__container {
+    width: calc((1069 / 1133) * 100%);
+  }
+}
+@media screen and (max-width: 650px) {
+  .section__container {
+    width: 91%;
+  }
+} */
+
+.section__title {
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 29px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
   text-rendering: optimizeLegibility;
   text-decoration: none;
-  color: #000;
-  letter-spacing: -0.9px;
-  width: calc((1140 / 1280) * 100%);
-  border-bottom: 1px solid black;
-  margin: 110px 0 0;
-  padding: 0 0 21px;
-} */
-/* 
+  color: #2e3d41;
+  letter-spacing: 1.5px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
 @media screen and (max-width: 838px) {
-  .section-title {
-    width: calc((668 / 768) * 100%);
-    margin: 90px 0 0;
+  .section__title {
   }
 }
 
 @media screen and (max-width: 420px) {
-  .section-title {
-    font-size: 18px;
-    width: calc((292 / 320) * 100%);
-    margin: 67px 0 0;
-    padding: 0 0 24px;
+  .section__title {
   }
-} */
+}
+
+.section__text {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  color: #2e3d41;
+  letter-spacing: 0;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 0;
+} 
+
+.section__text:last-of-type {
+  margin: 0;
+}
+
+
+img {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  object-fit: cover;
+}

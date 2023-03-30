@@ -36,7 +36,6 @@ function App() {
             <Route path='prices' element={<Prices />} />
             <Route path='contacts' element={<Contacts />} />
             <Route path='videos' element={<Videos />} />
-            {/* <Route path='Videos' element={<Blog />} /> */}
             <Route path='*' element={<PageNotFound />} />
           </Route>
         </Route>
