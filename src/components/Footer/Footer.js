@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className='footer section'>
       <div className='footer__container section__container'>
-        <p className='footer__copyright'>&copy; Алексей Смирнов 2022</p>
+        <p className='footer__copyright'>&copy; Алексей Смирнов 2023</p>
         <nav className='footer__contacts'>
           <ul className='footer__contacts-list'>
             <li className='footer__contacts-list-item link'>

@@ -1,0 +1,11 @@
+.about__text-container {
+  margin: 0;
+  padding: 0;
+}
+
+.about__photo {
+  float: right;
+  width: 400px;
+  height: 325px;
+  margin: 0 0 10px 20px;
+}
