@@ -20,18 +20,6 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
         </li>
         <li className='navigation__list-item' onClick={() => windowSize < 880 && setIsMenuOpen(false)}>
           <NavLink
-            to='/projects'
-            className={({ isActive }) =>
-              isActive
-                ? 'navigation__link navigation__link_active link'
-                : 'navigation__link link'
-            }
-          >
-            Проекты
-          </NavLink>
-        </li>
-        <li className='navigation__list-item' onClick={() => windowSize < 880 && setIsMenuOpen(false)}>
-          <NavLink
             to='/references'
             className={({ isActive }) =>
               isActive

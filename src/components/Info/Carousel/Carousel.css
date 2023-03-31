@@ -12,3 +12,14 @@
   background-size: cover;
   object-fit: cover;
 }
+
+.swiper-button-prev {
+  color: #647065;
+}
+.swiper-button-next {
+  color: #647065;
+}
+
+.swiper-pagination-bullet-active {
+  background: #647065;
+}
