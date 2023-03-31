@@ -15,19 +15,17 @@ export default function Carousel() {
 
   return (
     <Swiper
-      className='section'
+      className='carousel'
       modules={[Navigation, Pagination, A11y, Autoplay]}
       spaceBetween={10}
       slidesPerView={1}
       navigation
       autoplay={{ delay: 5000 }}
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
       {carouselImages.map((image) => (
-        <SwiperSlide key={image.src}>
-          <img src={image.src} alt={image.alt} />
+        <SwiperSlide className='carousel__slide' key={image.src}>
+          <img className='carousel__image' src={image.src} alt={image.alt} />
         </SwiperSlide>
       ))}
     </Swiper>

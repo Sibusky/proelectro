@@ -4,7 +4,7 @@ import Lead from './Lead/Lead';
 
 export default function Info() {
   return (
-    <main className='info section'>
+    <main className='info'>
       <Lead />
     </main>
   );

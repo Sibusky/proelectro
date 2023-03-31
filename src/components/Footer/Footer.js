@@ -3,8 +3,8 @@ import './Footer.css';
 
 export default function Footer() {
   return (
-    <footer className='footer'>
-      <div className='footer__container'>
+    <footer className='footer section'>
+      <div className='footer__container section__container'>
         <p className='footer__copyright'>&copy; Алексей Смирнов 2022</p>
         <nav className='footer__contacts'>
           <ul className='footer__contacts-list'>
