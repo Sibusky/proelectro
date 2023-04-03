@@ -5,13 +5,13 @@ import Lead from './Lead/Lead';
 import Projects from './Projects/Projects';
 import Steps from './Steps/Steps';
 
-export default function Info() {
+export default function Info({ projects, isFetching }) {
   return (
     <main className='info'>
       <Lead />
       <About />
       <Steps />
-      <Projects />
+      <Projects projects={projects} isFetching={isFetching} />
     </main>
   );
 }

@@ -7,7 +7,7 @@ export default function About() {
     <section className='about section'>
       <div className='about__container section__container'>
         <h2 className='about__title section__title'>Кто мы</h2>
-        <p className='about__text-container'>
+        <div className='about__text-container'>
           <img
             className='about__photo'
             src={aboutPhoto}
@@ -37,7 +37,7 @@ export default function About() {
           <p className='about__text section__text'>
             Делаем электрику в Вологде, но готовы выехать в район.
           </p>
-        </p>
+        </div>
       </div>
     </section>
   );
