@@ -2,7 +2,7 @@ import React from 'react';
 import './Projects.css';
 import ProjectCard from './ProjectCard/ProjectCard';
 
-export default function Projects({ projects, isFetching }) {
+export default function Projects({ projects, isFetching, handleClick }) {
   return (
     <section className='projects section'>
       <div className='projects__container section__container'>
@@ -30,6 +30,7 @@ export default function Projects({ projects, isFetching }) {
                 title={project.title}
                 description={project.description}
                 images={project.images}
+                handleClick={handleClick}
               />
             ))}
           </div>

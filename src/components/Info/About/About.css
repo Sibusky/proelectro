@@ -9,3 +9,7 @@
   height: 325px;
   margin: 0 0 10px 20px;
 }
+
+.about__text {
+  text-indent: 20px;
+}

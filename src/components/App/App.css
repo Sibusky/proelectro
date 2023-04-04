@@ -123,9 +123,20 @@ main {
   width: 100%;
   margin: 0 0 10px 0;
   padding: 0;
-  text-indent: 20px;
-} 
+}
 
 .section__text:last-of-type {
   margin: 0;
+}
+
+.card {
+  scale: 1;
+  filter: grayscale(100%);
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  scale: 1.01;
+  filter: grayscale(0);
 }

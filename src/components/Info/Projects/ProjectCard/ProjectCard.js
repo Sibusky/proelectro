@@ -1,11 +1,23 @@
-import React from 'react'
-import './ProjectCard.css'
+import React from 'react';
+import './ProjectCard.css';
 
-export default function ProjectCard({ title, images }) {
+export default function ProjectCard({
+  title,
+  images,
+  description,
+  handleClick,
+}) {
   return (
-    <div className='project-card'>
-        <img className='project-card__image' src={images['1']} alt={title}/>
-        <p className='project-card__title section__text'>{title}</p>
+    <div
+      className='project-card card'
+      onClick={() => handleClick(title, description, images)}
+    >
+      <img
+        className='project-card__image'
+        src={images[0].link}
+        alt={description}
+      />
+      <p className='project-card__title section__text'>{title}</p>
     </div>
-  )
+  );
 }

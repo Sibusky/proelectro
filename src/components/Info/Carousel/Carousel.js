@@ -6,13 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/autoplay'
+import 'swiper/css/autoplay';
 
 import { carouselImages } from '../../../constants/carouselImages';
 import './Carousel.css';
 
 export default function Carousel() {
-
   return (
     <Swiper
       className='carousel'
