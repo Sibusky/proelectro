@@ -27,6 +27,7 @@ export default function Projects({ projects, isFetching, handleClick }) {
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
+                id={project.id}
                 title={project.title}
                 description={project.description}
                 images={project.images}

@@ -2,6 +2,7 @@ import React from 'react';
 import './ProjectCard.css';
 
 export default function ProjectCard({
+  id,
   title,
   images,
   description,
@@ -10,7 +11,7 @@ export default function ProjectCard({
   return (
     <div
       className='project-card card'
-      onClick={() => handleClick(title, description, images)}
+      onClick={() => handleClick(id, title, description, images)}
     >
       <img
         className='project-card__image'

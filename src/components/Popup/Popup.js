@@ -2,17 +2,7 @@ import React, { useEffect } from 'react';
 import './Popup.css';
 
 export default function Popup({ isPopupOpened, closePopup, children }) {
-  // Закрытиe popup по esc
-  useEffect(() => {
-    const closeByEsc = (event) => {
-      if (event.key === 'Escape') {
-        event.preventDefault();
-        closePopup();
-      }
-    };
-    document.addEventListener('keydown', closeByEsc);
-    return () => document.removeEventListener('keydown', closeByEsc);
-  }, [closePopup]);
+
 
   return (
     <div

@@ -10,7 +10,7 @@
   height: 100vh;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.7s, opacity ease 0.7s;
+  /* transition: visibility 0.5s, opacity ease 0.5s; */
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }

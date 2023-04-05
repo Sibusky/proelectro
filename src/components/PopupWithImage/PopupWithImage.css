@@ -1,0 +1,16 @@
+.popup__carousel-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.popup__carousel-image {
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+.popup__carousel-image-caption {
+    text-align: center;
+}

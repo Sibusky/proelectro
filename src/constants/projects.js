@@ -5,50 +5,62 @@ export const projects = [
     description: 'Новая проводка в новом загородном доме.',
     images: [
       {
+        id: 1,
         caption: 'Описание 1',
         link: require('../images/projects/sloboda/01.jpg'),
       },
       {
+        id: 2,
         caption: 'Описание 2',
         link: require('../images/projects/sloboda/02.jpg'),
       },
       {
+        id: 3,
         caption: 'Описание 3',
         link: require('../images/projects/sloboda/03.jpg'),
       },
       {
+        id: 4,
         caption: 'Описание 4',
         link: require('../images/projects/sloboda/04.jpg'),
       },
       {
+        id: 5,
         caption: 'Описание 5',
         link: require('../images/projects/sloboda/05.jpg'),
       },
       {
+        id: 6,
         caption: 'Описание 6',
         link: require('../images/projects/sloboda/06.jpg'),
       },
       {
+        id: 7,
         caption: 'Описание 7',
         link: require('../images/projects/sloboda/07.jpg'),
       },
       {
+        id: 8,
         caption: 'Описание 8',
         link: require('../images/projects/sloboda/08.jpg'),
       },
       {
+        id: 9,
         caption: 'Описание 9',
         link: require('../images/projects/sloboda/09.jpg'),
       },
       {
+        id: 10,
         caption: 'Описание 10',
         link: require('../images/projects/sloboda/10.jpg'),
       },
       {
+        id: 11,
         caption: 'Описание 11',
         link: require('../images/projects/sloboda/11.jpg'),
       },
       {
+        id: 12,
         caption: 'Описание 12',
         link: require('../images/projects/sloboda/12.jpg'),
       },
@@ -60,46 +72,57 @@ export const projects = [
     description: 'Сборка щита для Коли Пучкова',
     images: [
       {
+        id: 1,
         caption: 'Описание 1',
         link: require('../images/projects/distribution-box/01.jpg'),
       },
       {
+        id: 2,
         caption: 'Описание 2',
         link: require('../images/projects/distribution-box/02.jpg'),
       },
       {
+        id: 3,
         caption: 'Описание 3',
         link: require('../images/projects/distribution-box/03.jpg'),
       },
       {
+        id: 4,
         caption: 'Описание 4',
         link: require('../images/projects/distribution-box/04.jpg'),
       },
       {
+        id: 5,
         caption: 'Описание 5',
         link: require('../images/projects/distribution-box/05.jpg'),
       },
       {
+        id: 6,
         caption: 'Описание 6',
         link: require('../images/projects/distribution-box/06.jpg'),
       },
       {
+        id: 7,
         caption: 'Описание 7',
         link: require('../images/projects/distribution-box/07.jpg'),
       },
       {
+        id: 8,
         caption: 'Описание 8',
         link: require('../images/projects/distribution-box/08.jpg'),
       },
       {
+        id: 9,
         caption: 'Описание 9',
         link: require('../images/projects/distribution-box/09.jpg'),
       },
       {
+        id: 10,
         caption: 'Описание 10',
         link: require('../images/projects/distribution-box/10.jpg'),
       },
       {
+        id: 11,
         caption: 'Описание 11',
         link: require('../images/projects/distribution-box/11.jpg'),
       },

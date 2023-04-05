@@ -13,16 +13,25 @@ import Videos from '../Videos/Videos';
 import PopupWithProject from '../PopupWithProject/PopupWithProject';
 
 import { fetchProjects } from '../../api/fetchProjects';
+import PopupWithImage from '../PopupWithImage/PopupWithImage';
 
 function App() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [isPopupOpened, setIsPopupOpened] = useState(false);
+  const [isPopupWithProjectOpened, setIsPopupWithProjectOpened] =
+    useState(false);
+  const [isPopupWithPhotoOpened, setIsPopupWithPhotoOpened] = useState(false);
   const [projects, setProjects] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [currentProject, setCurrentProject] = useState({
+    id: '',
     title: '',
     description: '',
     images: '',
+  });
+  const [currentImage, setCurrentImage] = useState({
+    id: '',
+    caption: '',
+    link: '',
   });
 
   const handleResize = debounce(() => {
@@ -45,25 +54,39 @@ function App() {
   }, [isFetching]);
 
   const openPopup = () => {
-    setIsPopupOpened(true);
+    setIsPopupWithProjectOpened(true);
   };
 
-  const closePopup = () => {
-    setIsPopupOpened(false);
-    setCurrentProject({
-      title: '',
-      description: '',
-      images: '',
-    });
+  const closePopupWithProject = () => {
+    setIsPopupWithProjectOpened(false);
   };
 
-  const handleCardClick = (title, description, images) => {
+  const handleCardClick = (id, title, description, images) => {
     setCurrentProject({
+      id,
       title,
       description,
       images,
     });
-    setIsPopupOpened(true);
+    setIsPopupWithProjectOpened(true);
+  };
+
+  const handleImageClick = (id, link, caption) => {
+    setIsPopupWithPhotoOpened(true);
+    setCurrentImage({
+      id,
+      link,
+      caption,
+    })
+  };
+
+  const closePopupWithImage = () => {
+    setIsPopupWithPhotoOpened(false);
+    setCurrentImage({
+      id: '',
+      caption: '',
+      link: '',
+    })
   };
 
   return (
@@ -90,9 +113,18 @@ function App() {
         </Route>
       </Routes>
       <PopupWithProject
-        isPopupOpened={isPopupOpened}
-        closePopup={closePopup}
+        isPopupOpened={isPopupWithProjectOpened}
+        closePopup={closePopupWithProject}
         project={currentProject}
+        handleImageClick={handleImageClick}
+        image={currentImage}
+
+      />
+      <PopupWithImage
+        isPopupOpened={isPopupWithPhotoOpened}
+        closePopup={closePopupWithImage}
+        project={currentProject}
+        image={currentImage}
       />
     </div>
   );
