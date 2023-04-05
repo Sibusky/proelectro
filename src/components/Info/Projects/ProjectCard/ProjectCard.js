@@ -15,7 +15,7 @@ export default function ProjectCard({
     >
       <img
         className='project-card__image'
-        src={images[0].link}
+        src={images[0].preview}
         alt={description}
       />
       <p className='project-card__title section__text'>{title}</p>

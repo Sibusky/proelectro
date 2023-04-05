@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './PopupWithImage.css';
 import Popup from '../Popup/Popup';
 
-import { Navigation } from 'swiper';
+import { Navigation, Keyboard } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -33,10 +33,12 @@ export default function PopupWithImage({
       {image.id ? (
         <Swiper
           className='popup__carousel'
-          modules={[Navigation]}
+          modules={[Navigation, Keyboard]}
           spaceBetween={10}
           slidesPerView={1}
           navigation
+          loop={true}
+          keyboard={{enabled: true}}
           initialSlide={+image.id - 1}
         >
           {project.images

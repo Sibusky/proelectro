@@ -36,7 +36,7 @@ export default function PopupWithProject({
             <img
               className='popup__grid-image button'
               key={image.id}
-              src={image.link}
+              src={image.preview}
               alt={image.caption}
               onClick={() =>
                 handleImageClick(image.id, image.link, image.caption)
