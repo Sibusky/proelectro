@@ -51,7 +51,7 @@ function App() {
       .then((res) => setProjects(res))
       .catch((err) => console.error(err))
       .finally(() => setIsFetching(false));
-  }, [isFetching]);
+  }, []);
 
   const openPopup = () => {
     setIsPopupWithProjectOpened(true);
@@ -77,7 +77,7 @@ function App() {
       id,
       link,
       caption,
-    })
+    });
   };
 
   const closePopupWithImage = () => {
@@ -86,7 +86,7 @@ function App() {
       id: '',
       caption: '',
       link: '',
-    })
+    });
   };
 
   return (
@@ -118,7 +118,6 @@ function App() {
         project={currentProject}
         handleImageClick={handleImageClick}
         image={currentImage}
-
       />
       <PopupWithImage
         isPopupOpened={isPopupWithPhotoOpened}
