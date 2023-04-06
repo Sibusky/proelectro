@@ -5,7 +5,7 @@
 .popup__carousel-slide {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: fit-content;
