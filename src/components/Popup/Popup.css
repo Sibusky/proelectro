@@ -23,7 +23,7 @@
 .popup__container {
   position: relative;
   width: 80vw;
-  /* height: fit-content; */
+  height: fit-content;
   background-color: #e5e5e5;
   border-radius: 5px;
   margin: 0;

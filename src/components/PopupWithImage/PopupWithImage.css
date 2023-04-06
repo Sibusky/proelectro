@@ -1,5 +1,6 @@
 .popup__carousel {
   padding: 0;
+  height: 100%;
 }
 
 .popup__carousel-slide {
@@ -8,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: fit-content;
+  height: 100%;
 }
 
 .popup__carousel-image {
