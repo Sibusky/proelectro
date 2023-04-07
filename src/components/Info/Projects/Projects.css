@@ -1,3 +1,7 @@
+.projects {
+  padding: 0 0 50px 0;
+}
+
 .projects__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

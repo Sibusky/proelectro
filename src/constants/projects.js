@@ -6,13 +6,19 @@ export const projects = [
     images: [
       {
         id: 1,
-        caption: 'Описание 1',
+        caption: `Трёхфазный электрический щит. Автоматика и оболочка фирмы Hager.
+        - Реле напряжения PH-260t, установленные пофазно.
+        - Реле-переключатель фаз ПЭФ-319.
+        - Контактор для функции мастер-клавиши.
+        - Возможность подключения генератора или ИБП.`,
         link: require('../images/projects/sloboda/01.jpg'),
         preview: require('../images/projects/sloboda/preview/01.jpg'),
       },
       {
         id: 2,
-        caption: 'Описание 2',
+        caption: `Проводка выполнена по потолку в гофре ПВХ
+        - Серая гофра для силовых цепей.
+        - Синяя гофра для слаботочнной сети.`,
         link: require('../images/projects/sloboda/02.jpg'),
         preview: require('../images/projects/sloboda/preview/02.jpg'),
       },

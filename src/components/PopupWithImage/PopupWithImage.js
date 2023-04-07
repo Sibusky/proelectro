@@ -29,7 +29,7 @@ export default function PopupWithImage({
   }, [closePopup]);
 
   return (
-    <Popup isPopupOpened={isPopupOpened} closePopup={closePopup}>
+    <Popup isPopupOpened={isPopupOpened} closePopup={closePopup} name='swiper'>
       {image.id ? (
         <Swiper
           className='popup__carousel'
@@ -38,20 +38,26 @@ export default function PopupWithImage({
           slidesPerView={1}
           navigation
           loop={true}
-          keyboard={{enabled: true}}
+          keyboard={{ enabled: true }}
           initialSlide={+image.id - 1}
         >
           {project.images
             ? project.images.map((image) => (
                 <SwiperSlide className='popup__carousel-slide' key={image.id}>
-                  <img
-                    className='popup__carousel-image'
-                    src={image.link}
-                    alt={image.caption}
-                  />
-                  <p className='popup__carousel-image-caption section__text'>
-                    {image.caption}
-                  </p>
+                  <div className='popup__carousel-slide-image-container'>
+                    <img
+                      className='popup__carousel-image'
+                      src={image.link}
+                      alt={project.title}
+                    />
+                  </div>
+                  <div className='popup__carousel-image-caption-container'>
+                    {image.caption.split('\n').map((text) => (
+                      <p className='popup__carousel-image-caption section__text'>
+                        {text}
+                      </p>
+                    ))}
+                  </div>
                 </SwiperSlide>
               ))
             : null}

@@ -29,7 +29,7 @@ export default function PopupWithProject({
   }, [closePopup, image]);
 
   return (
-    <Popup isPopupOpened={isPopupOpened} closePopup={closePopup}>
+    <Popup isPopupOpened={isPopupOpened} closePopup={closePopup} name='project'>
       <div className='popup__grid'>
         {project.images ? (
           project.images.map((image) => (

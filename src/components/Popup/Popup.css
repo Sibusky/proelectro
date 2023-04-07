@@ -22,13 +22,14 @@
 
 .popup__container {
   position: relative;
-  width: 80vw;
+  width: fit-content;
   height: fit-content;
   background-color: #e5e5e5;
   border-radius: 5px;
   margin: 0;
-  padding: 20px;
+  /* padding: 20px; */
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .popup__close-button {
