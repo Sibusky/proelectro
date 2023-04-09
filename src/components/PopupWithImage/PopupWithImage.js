@@ -57,6 +57,7 @@ export default function PopupWithImage({
                         {text}
                       </p>
                     ))}
+                    <div className='popup__carousel-image-caption-logo'></div>
                   </div>
                 </SwiperSlide>
               ))
