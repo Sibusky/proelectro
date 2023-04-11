@@ -7,7 +7,7 @@ export default function Lead() {
     <section className='lead section'>
       <div className='lead__container section__container'>
         <h1 className='lead__title section__title'>
-          Делаем удобную и безопасную электропроводку в Вологде
+          Делаем удобную и безопасную электро&shy;проводку в Вологде
         </h1>
         <Carousel />
         <p className='lead__motto section__text'>Цените качество? Нам с вами по пути.</p>

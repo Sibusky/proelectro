@@ -21,6 +21,7 @@ export default function Carousel() {
       navigation
       autoplay={{ delay: 5000 }}
       pagination={{ clickable: true }}
+      loop={true}
     >
       {carouselImages.map((image) => (
         <SwiperSlide className='carousel__slide' key={image.src}>

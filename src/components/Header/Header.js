@@ -15,10 +15,14 @@ export default function Header({ windowSize }) {
     <header className='header section'>
       <div className='header__container section__container'>
         <div className='header__logo-and-phones'>
-        <Logo />
+          <Logo />
           <ul className='header__phones'>
-            <li className='header__phone section__text'>+7-900-501-12-50 Михаил</li>
-            <li className='header__phone section__text'>+7-900-552-72-29 Алексей</li>
+            <li className='header__phone section__text'>
+              +7-900-501-12-50 Михаил
+            </li>
+            <li className='header__phone section__text'>
+              +7-900-552-72-29 Алексей
+            </li>
           </ul>
         </div>
         {windowSize > 880 ? (
@@ -58,7 +62,11 @@ export default function Header({ windowSize }) {
         )}
       </div>
 
-      <MenuModal isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} windowSize={windowSize}/>
+      <MenuModal
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        windowSize={windowSize}
+      />
     </header>
   );
 }

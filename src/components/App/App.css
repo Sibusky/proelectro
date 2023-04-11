@@ -100,15 +100,26 @@ main {
   padding: 0;
 }
 
-@media screen and (max-width: 838px) {
+@media screen and (max-width: 840px) {
   .section__title {
+    font-size: 34px;
+    line-height: 46px;
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
   .section__title {
+    font-size: 30px;
+    line-height: 40px;
   }
 }
+/* 
+@media screen and (max-width: 350px) {
+  .section__title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+} */
 
 .section__text {
   font-family: 'Inter', Arial, sans-serif;
@@ -127,6 +138,13 @@ main {
 
 .section__text:last-of-type {
   margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .section__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .card {

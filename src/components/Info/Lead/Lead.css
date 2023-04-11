@@ -5,6 +5,20 @@
   text-align: center;
 }
 
+@media screen and (max-width: 840px) {
+  .lead__title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lead__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
 .lead__motto {
     letter-spacing: 2px;
 }

@@ -48,3 +48,16 @@
   margin: 0;
   padding: 0;
 }
+
+@media screen and (max-width: 900px) {
+  .menu__close-btn {
+    top: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu__close-btn {
+    top: 24px;
+    right: 28px;
+  }
+}
