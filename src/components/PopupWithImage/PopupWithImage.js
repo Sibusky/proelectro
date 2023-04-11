@@ -28,6 +28,7 @@ export default function PopupWithImage({
     return () => document.removeEventListener('keydown', closeByEsc);
   }, [closePopup]);
 
+
   return (
     <Popup isPopupOpened={isPopupOpened} closePopup={closePopup} name='swiper'>
       {image.id ? (
@@ -53,7 +54,7 @@ export default function PopupWithImage({
                   </div>
                   <div className='popup__carousel-image-caption-container'>
                     {image.caption.split('\n').map((text) => (
-                      <p className='popup__carousel-image-caption section__text'>
+                      <p className='popup__carousel-image-caption section__text' key={text}>
                         {text}
                       </p>
                     ))}

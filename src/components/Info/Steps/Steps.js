@@ -11,7 +11,7 @@ export default function Steps() {
         <img className='steps__image' src={stepsPhoto} alt='Три простых шага' />
         <div className='steps__text-container'>
           <h3 className='steps__title section__title'>
-            Три простых шага к новой электропроводке:
+            Три простых шага к новой электро&shy;проводке:
           </h3>
           <ul className='steps__list'>
             <li className='steps__list-item section__text'>

@@ -9,14 +9,18 @@ export default function Popup({ isPopupOpened, closePopup, children, name }) {
       }`}
       onClick={() => closePopup()}
     >
-      <div className='popup__container' style={name === 'project' ? {padding: 20} : {padding: 0}}  onClick={(e) => e.stopPropagation()}>
+      <div
+        className='popup__container'
+        style={name === 'project' ? { padding: 30 } : { padding: 0 }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {children}
         <button
           className='popup__close-button section__text button'
           onClick={() => closePopup()}
         >
           &times;
         </button>
-        {children}
       </div>
     </div>
   );
