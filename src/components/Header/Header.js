@@ -14,7 +14,13 @@ export default function Header({ windowSize }) {
   return (
     <header className='header section'>
       <div className='header__container section__container'>
+        <div className='header__logo-and-phones'>
         <Logo />
+          <ul className='header__phones'>
+            <li className='header__phone section__text'>+7-900-501-12-50 Михаил</li>
+            <li className='header__phone section__text'>+7-900-552-72-29 Алексей</li>
+          </ul>
+        </div>
         {windowSize > 880 ? (
           <HeaderNavigation />
         ) : (
