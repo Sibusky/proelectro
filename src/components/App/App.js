@@ -14,6 +14,7 @@ import PopupWithProject from '../PopupWithProject/PopupWithProject';
 
 import { fetchProjects } from '../../api/fetchProjects';
 import PopupWithImage from '../PopupWithImage/PopupWithImage';
+import MenuModal from '../Header/MenuModal/MenuModal';
 
 function App() {
   const [windowSize, setWindowSize] = useState(document.documentElement.clientWidth);
@@ -33,6 +34,9 @@ function App() {
     caption: '',
     link: '',
   });
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
 
   const handleResize = debounce(() => {
     setWindowSize(document.documentElement.clientWidth);
@@ -52,6 +56,10 @@ function App() {
       .catch((err) => console.error(err))
       .finally(() => setIsFetching(false));
   }, []);
+
+  const handleMenuButtonClick = () => {
+    setIsMenuOpen(true);
+  };
 
   const closePopupWithProject = () => {
     setIsPopupWithProjectOpened(false);
@@ -89,7 +97,7 @@ function App() {
     <div className='App'>
       <Routes>
         <Route path='/'>
-          <Route element={<Layout windowSize={windowSize} />}>
+          <Route element={<Layout windowSize={windowSize} handleClick={handleMenuButtonClick} />}>
             <Route
               index
               element={
@@ -108,6 +116,11 @@ function App() {
           </Route>
         </Route>
       </Routes>
+      <MenuModal
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        windowSize={windowSize}
+      />
       <PopupWithProject
         isPopupOpened={isPopupWithProjectOpened}
         closePopup={closePopupWithProject}

@@ -1,15 +1,15 @@
-import React from 'react'
-import './Layout.css'
-import { Outlet } from 'react-router-dom'
-import Footer from '../Footer/Footer'
-import Header from '../Header/Header'
+import React from 'react';
+import './Layout.css';
+import { Outlet } from 'react-router-dom';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 
-export default function Layout({ windowSize }) {
+export default function Layout({ windowSize, handleClick }) {
   return (
     <div className='layout'>
-        <Header windowSize ={windowSize}/>
-        <Outlet />
-        <Footer />       
+      <Header windowSize={windowSize} handleClick={handleClick} />
+      <Outlet />
+      <Footer />
     </div>
-  )
+  );
 }

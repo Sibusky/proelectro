@@ -1,5 +1,6 @@
 .carousel {
   width: 100%;
+  z-index: 0;
 }
 
 .carousel__slide {

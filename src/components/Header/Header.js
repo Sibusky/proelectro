@@ -4,14 +4,12 @@ import './Header.css';
 import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
 import MenuModal from './MenuModal/MenuModal';
 
-export default function Header({ windowSize }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+export default function Header({ windowSize, handleClick }) {
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuButtonClick = () => {
-    setIsMenuOpen(true);
-  };
-
-  console.log(windowSize)
+  // const handleMenuButtonClick = () => {
+  //   setIsMenuOpen(true);
+  // };
 
   return (
     <header className='header section'>
@@ -32,7 +30,7 @@ export default function Header({ windowSize }) {
         ) : (
           <button
             className='header__menu-btn button'
-            onClick={handleMenuButtonClick}
+            onClick={() => handleClick()}
           >
             <svg
               width='44'
@@ -64,11 +62,11 @@ export default function Header({ windowSize }) {
         )}
       </div>
 
-      <MenuModal
+      {/* <MenuModal
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         windowSize={windowSize}
-      />
+      /> */}
     </header>
   );
 }
