@@ -13,6 +13,12 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .steps__container {
+    height: 452px;
+  }
+}
+
 .steps__container {
   position: relative;
 }
@@ -32,6 +38,13 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .steps__background {
+    height: 452px;
+    right: -16px;
+  }
+}
+
 .steps__image {
   position: absolute;
   top: 0;
@@ -47,6 +60,13 @@
 @media screen and (max-width: 450px) {
   .steps__image {
     left: -145px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .steps__image {
+    width: 392px;
+    left: -115px;
   }
 }
 
