@@ -39,14 +39,21 @@
 
 @media screen and (max-width: 500px) {
   .header__phones {
-    padding: 0 10px;
-    height: 40px;
+    padding: 0 5px;
+    height: 35px;
   }
 }
 
 .header__phone {
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__phone {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .header__menu-btn {

@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import Layout from '../Layout/Layout';
@@ -16,7 +16,7 @@ import { fetchProjects } from '../../api/fetchProjects';
 import PopupWithImage from '../PopupWithImage/PopupWithImage';
 
 function App() {
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [windowSize, setWindowSize] = useState(document.documentElement.clientWidth);
   const [isPopupWithProjectOpened, setIsPopupWithProjectOpened] =
     useState(false);
   const [isPopupWithPhotoOpened, setIsPopupWithPhotoOpened] = useState(false);
@@ -52,10 +52,6 @@ function App() {
       .catch((err) => console.error(err))
       .finally(() => setIsFetching(false));
   }, []);
-
-  const openPopup = () => {
-    setIsPopupWithProjectOpened(true);
-  };
 
   const closePopupWithProject = () => {
     setIsPopupWithProjectOpened(false);
