@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.2d5db569.css",
+    "main.css": "./static/css/main.80758253.css",
     "main.js": "./static/js/main.4dc93903.js",
     "static/js/787.0ae25950.chunk.js": "./static/js/787.0ae25950.chunk.js",
     "static/media/lead-img-1.jpg": "./static/media/lead-img-1.9bd2050ce68bad9b7c7c.jpg",
@@ -41,12 +41,12 @@
     "static/media/icon-electric-scheme.png": "./static/media/icon-electric-scheme.7f817f417ab405277f64.png",
     "static/media/icon-electric-panel.png": "./static/media/icon-electric-panel.bb923978a97e6679d540.png",
     "index.html": "./index.html",
-    "main.2d5db569.css.map": "./static/css/main.2d5db569.css.map",
+    "main.80758253.css.map": "./static/css/main.80758253.css.map",
     "main.4dc93903.js.map": "./static/js/main.4dc93903.js.map",
     "787.0ae25950.chunk.js.map": "./static/js/787.0ae25950.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d5db569.css",
+    "static/css/main.80758253.css",
     "static/js/main.4dc93903.js"
   ]
 }
