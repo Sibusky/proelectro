@@ -1,16 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Logo from '../Logo/Logo';
 import './Header.css';
 import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
-import MenuModal from './MenuModal/MenuModal';
 
 export default function Header({ windowSize, handleClick }) {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // const handleMenuButtonClick = () => {
-  //   setIsMenuOpen(true);
-  // };
-
   return (
     <header className='header section'>
       <div className='header__container section__container'>
