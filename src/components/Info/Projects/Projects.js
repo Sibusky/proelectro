@@ -1,6 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import ProjectCard from './ProjectCard/ProjectCard';
+import { Link } from 'react-router-dom';
 
 export default function Projects({ projects, isFetching, handleClick }) {
   return (
@@ -25,14 +26,15 @@ export default function Projects({ projects, isFetching, handleClick }) {
         ) : (
           <div className='projects__grid'>
             {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                description={project.description}
-                images={project.images}
-                handleClick={handleClick}
-              />
+              <Link className='project__grid-link' to={`project/${project.id}`} key={project.id}>
+                <ProjectCard
+                  id={project.id}
+                  title={project.title}
+                  description={project.description}
+                  images={project.images}
+                  handleClick={handleClick}
+                />
+              </Link>
             ))}
           </div>
         )}

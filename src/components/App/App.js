@@ -1,7 +1,7 @@
 import './App.css';
 
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import Layout from '../Layout/Layout';
 import Info from '../Info/Info';
@@ -17,7 +17,9 @@ import PopupWithImage from '../PopupWithImage/PopupWithImage';
 import MenuModal from '../Header/MenuModal/MenuModal';
 
 function App() {
-  const [windowSize, setWindowSize] = useState(document.documentElement.clientWidth);
+  const [windowSize, setWindowSize] = useState(
+    document.documentElement.clientWidth
+  );
   const [isPopupWithProjectOpened, setIsPopupWithProjectOpened] =
     useState(false);
   const [isPopupWithPhotoOpened, setIsPopupWithPhotoOpened] = useState(false);
@@ -36,7 +38,7 @@ function App() {
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
+  const navigate = useNavigate();
 
   const handleResize = debounce(() => {
     setWindowSize(document.documentElement.clientWidth);
@@ -63,6 +65,7 @@ function App() {
 
   const closePopupWithProject = () => {
     setIsPopupWithProjectOpened(false);
+    navigate(-1);
   };
 
   const handleCardClick = (id, title, description, images) => {
@@ -91,13 +94,21 @@ function App() {
       caption: '',
       link: '',
     });
+    navigate(-1);
   };
 
   return (
     <div className='App'>
       <Routes>
         <Route path='/'>
-          <Route element={<Layout windowSize={windowSize} handleClick={handleMenuButtonClick} />}>
+          <Route
+            element={
+              <Layout
+                windowSize={windowSize}
+                handleClick={handleMenuButtonClick}
+              />
+            }
+          >
             <Route
               index
               element={
@@ -113,6 +124,29 @@ function App() {
             <Route path='contacts' element={<Contacts />} />
             <Route path='videos' element={<Videos />} />
             <Route path='*' element={<PageNotFound />} />
+            <Route
+              path='project/:projectId'
+              element={
+                <PopupWithProject
+                  isPopupOpened={isPopupWithProjectOpened}
+                  closePopup={closePopupWithProject}
+                  project={currentProject}
+                  handleImageClick={handleImageClick}
+                  image={currentImage}
+                />
+              }
+            />
+            <Route
+              path='project/:projectId/image'
+              element={
+                <PopupWithImage
+                  isPopupOpened={isPopupWithPhotoOpened}
+                  closePopup={closePopupWithImage}
+                  project={currentProject}
+                  image={currentImage}
+                />
+              }
+            />
           </Route>
         </Route>
       </Routes>
@@ -121,7 +155,7 @@ function App() {
         setIsMenuOpen={setIsMenuOpen}
         windowSize={windowSize}
       />
-      <PopupWithProject
+      {/* <PopupWithProject
         isPopupOpened={isPopupWithProjectOpened}
         closePopup={closePopupWithProject}
         project={currentProject}
@@ -133,7 +167,7 @@ function App() {
         closePopup={closePopupWithImage}
         project={currentProject}
         image={currentImage}
-      />
+      /> */}
     </div>
   );
 }
