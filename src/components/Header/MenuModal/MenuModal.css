@@ -22,17 +22,17 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  width: 520px;
+  width: 320px;
   height: 100%;
   position: absolute;
   top: 0;
-  right: -520px;
+  right: -320px;
   transition: transform 0.7s;
   z-index: 1;
 }
 
 .menu__content_opened {
-  transform: translateX(-520px);
+  transform: translateX(-320px);
 }
 
 .menu__close-btn {

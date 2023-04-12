@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import Layout from '../Layout/Layout';
@@ -35,7 +35,7 @@ function App() {
   });
 
   const handleResize = debounce(() => {
-    setWindowSize(window.innerWidth);
+    setWindowSize(document.documentElement.clientWidth);
   }, 100);
 
   useEffect(() => {

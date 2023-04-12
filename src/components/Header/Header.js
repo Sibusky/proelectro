@@ -11,6 +11,8 @@ export default function Header({ windowSize }) {
     setIsMenuOpen(true);
   };
 
+  console.log(windowSize)
+
   return (
     <header className='header section'>
       <div className='header__container section__container'>
