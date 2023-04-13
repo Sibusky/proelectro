@@ -76,6 +76,7 @@ function App() {
   const closePopupWithProject = () => {
     setIsPopupWithProjectOpened(false);
     navigate(-1);
+    setScroll(1000);
   };
 
   const handleCardClick = (id, title, description, images) => {
@@ -117,7 +118,6 @@ function App() {
                 windowSize={windowSize}
                 handleClick={handleMenuButtonClick}
                 scroll={scroll}
-                // ref={ref}
               />
             }
           >
@@ -136,30 +136,30 @@ function App() {
             <Route path='contacts' element={<Contacts />} />
             <Route path='videos' element={<Videos />} />
             <Route path='*' element={<PageNotFound />} />
-            <Route
-              path='project/:projectId'
-              element={
-                <PopupWithProject
-                  isPopupOpened={isPopupWithProjectOpened}
-                  closePopup={closePopupWithProject}
-                  project={currentProject}
-                  handleImageClick={handleImageClick}
-                  image={currentImage}
-                />
-              }
-            />
-            <Route
-              path='project/:projectId/image'
-              element={
-                <PopupWithImage
-                  isPopupOpened={isPopupWithPhotoOpened}
-                  closePopup={closePopupWithImage}
-                  project={currentProject}
-                  image={currentImage}
-                />
-              }
-            />
           </Route>
+          <Route
+            path='project/:projectId'
+            element={
+              <PopupWithProject
+                isPopupOpened={isPopupWithProjectOpened}
+                closePopup={closePopupWithProject}
+                project={currentProject}
+                handleImageClick={handleImageClick}
+                image={currentImage}
+              />
+            }
+          />
+          <Route
+            path='project/:projectId/image'
+            element={
+              <PopupWithImage
+                isPopupOpened={isPopupWithPhotoOpened}
+                closePopup={closePopupWithImage}
+                project={currentProject}
+                image={currentImage}
+              />
+            }
+          />
         </Route>
       </Routes>
       <MenuModal
