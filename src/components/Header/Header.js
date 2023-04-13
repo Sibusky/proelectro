@@ -3,9 +3,11 @@ import Logo from '../Logo/Logo';
 import './Header.css';
 import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
 
-export default function Header({ windowSize, handleClick }) {
+export default function Header({ windowSize, handleClick, scroll }) {
   return (
-    <header className='header section'>
+    <header
+      className={scroll > 50 ? 'header header_small section' : 'header section'}
+    >
       <div className='header__container section__container'>
         <div className='header__logo-and-phones'>
           <Logo />
@@ -18,11 +20,15 @@ export default function Header({ windowSize, handleClick }) {
             </li>
           </ul>
         </div>
-        {windowSize > 880 ? (
+        {windowSize > 1000 ? (
           <HeaderNavigation />
         ) : (
           <button
-            className='header__menu-btn button'
+            className={
+              scroll > 50
+                ? 'header__menu-btn header__menu-btn_small button'
+                : 'header__menu-btn button'
+            }
             onClick={() => handleClick()}
           >
             <svg
@@ -54,12 +60,6 @@ export default function Header({ windowSize, handleClick }) {
           </button>
         )}
       </div>
-
-      {/* <MenuModal
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        windowSize={windowSize}
-      /> */}
     </header>
   );
 }

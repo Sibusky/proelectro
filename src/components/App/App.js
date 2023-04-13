@@ -37,8 +37,16 @@ function App() {
     link: '',
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scroll, setScroll] = useState(window.scrollY);
 
-  const navigate = useNavigate();
+  const handleScroll = debounce(() => {
+    setScroll(window.scrollY);
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   const handleResize = debounce(() => {
     setWindowSize(document.documentElement.clientWidth);
@@ -62,6 +70,8 @@ function App() {
   const handleMenuButtonClick = () => {
     setIsMenuOpen(true);
   };
+
+  const navigate = useNavigate();
 
   const closePopupWithProject = () => {
     setIsPopupWithProjectOpened(false);
@@ -106,6 +116,8 @@ function App() {
               <Layout
                 windowSize={windowSize}
                 handleClick={handleMenuButtonClick}
+                scroll={scroll}
+                // ref={ref}
               />
             }
           >

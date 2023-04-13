@@ -1,19 +1,24 @@
 .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 .logo__img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 90px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   opacity: 0.85;
   padding: 0;
   margin: 0;
 }
-
+/* 
 @media screen and (max-width: 900px) {
   .logo__img {
     width: 80px;
@@ -26,4 +31,4 @@
     width: 70px;
     height: 70px;
   }
-}
+} */

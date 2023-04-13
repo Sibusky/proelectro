@@ -1,5 +1,4 @@
 .navigation {
-  /* margin: 0 0 0 auto; */
   margin: 0;
   padding: 0;
 }
@@ -38,22 +37,4 @@
 
 .navigation__link_active {
   border-bottom: 2px solid #2e3d41;
-}
-
-@media screen and (max-width: 879px) {
-  .navigation {
-    /* margin: 0 auto 0; */
-  }
-  
-  /* .navigation__list {
-    flex-direction: column;
-  } */
-
-  /* .navigation__list-item {
-    margin: 0 0 20px 0;
-  }
-
-  .navigation__list-item:last-of-type {
-    margin: 0;
-  } */
 }

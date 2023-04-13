@@ -5,7 +5,7 @@ import './HeaderNavigation.css';
 export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
   return (
     <nav className='navigation'>
-      <ul className={windowSize < 880 ? 'navigation__list navigation__list_menu' : 'navigation__list'}>
+      <ul className={windowSize < 1000 ? 'navigation__list navigation__list_menu' : 'navigation__list'}>
         <li className='navigation__list-item' onClick={() =>  windowSize < 880 && setIsMenuOpen(false)}>
           <NavLink 
             to='/'
