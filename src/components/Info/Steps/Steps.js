@@ -15,19 +15,23 @@ export default function Steps() {
           </h3>
           <ul className='steps__list'>
             <li className='steps__list-item section__text'>
-              <Link className='link' to='/contacts'>
-                1. Связаться с нами любым удобным способом и договориться о
-                замерах.
-              </Link>
+              1.{' '}
+              <Link className='steps__list-item-link' to='/contacts'>
+                Связаться
+              </Link>{' '}
+              с нами любым удобным способом и договориться о замерах.
             </li>
             <li className='steps__list-item section__text'>
-              <a className='link'
+              2.{' '}
+              <a
+                className='steps__list-item-link'
                 href='https://docs.google.com/spreadsheets/d/10BbELok5seuzB9n74BMIjQsCjlVFj6wcVuvTE-dmlK0/edit#gid=0'
                 target='_blank'
                 rel='noreferrer'
               >
-                2. Согласовать смету на материалы и работы.
-              </a>
+                Согласовать
+              </a>{' '}
+              смету на материалы и работы.
             </li>
             <li className='steps__list-item section__text'>
               3. Быть на связи в процессе выполнения работ для решения
