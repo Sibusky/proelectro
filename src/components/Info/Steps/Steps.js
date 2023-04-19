@@ -22,16 +22,16 @@ export default function Steps() {
               с нами любым удобным способом и договориться о замерах.
             </li>
             <li className='steps__list-item section__text'>
-              2.{' '}
+              2. Согласовать{' '}
               <a
                 className='steps__list-item-link'
                 href='https://docs.google.com/spreadsheets/d/10BbELok5seuzB9n74BMIjQsCjlVFj6wcVuvTE-dmlK0/edit#gid=0'
                 target='_blank'
                 rel='noreferrer'
               >
-                Согласовать
+                смету
               </a>{' '}
-              смету на материалы и работы.
+              на материалы и работы.
             </li>
             <li className='steps__list-item section__text'>
               3. Быть на связи в процессе выполнения работ для решения
