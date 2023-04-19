@@ -33,6 +33,9 @@ export default function PopupWithProject({
 
   return (
     <Popup isPopupOpened={isPopupOpened} closePopup={closePopup} name='project'>
+      <h4 className='popup__description section__text'>
+        {project.description}
+      </h4>
       <div className='popup__grid'>
         {project.images ? (
           project.images.map((image) => (
@@ -53,9 +56,6 @@ export default function PopupWithProject({
           </p>
         )}
       </div>
-      <h4 className='popup__description section__text'>
-        {project.description}
-      </h4>
     </Popup>
   );
 }

@@ -3,10 +3,11 @@ import Logo from '../Logo/Logo';
 import './Header.css';
 import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
 
-export default function Header({ windowSize, handleClick, scroll }) {
+export default function Header({ windowSize, handleClick, scroll, isPopupOpen }) {
+
   return (
     <header
-      className={scroll > 50 ? 'header header_small section' : 'header section'}
+      className={scroll > 50 || isPopupOpen ? 'header header_small section' : 'header section'}
     >
       <div className='header__container section__container'>
         <div className='header__logo-and-phones'>
@@ -25,7 +26,7 @@ export default function Header({ windowSize, handleClick, scroll }) {
         ) : (
           <button
             className={
-              scroll > 50
+              scroll > 50 || isPopupOpen
                 ? 'header__menu-btn header__menu-btn_small button'
                 : 'header__menu-btn button'
             }

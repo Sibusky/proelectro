@@ -4,14 +4,18 @@ import './Popup.css';
 export default function Popup({ isPopupOpened, closePopup, children, name }) {
   return (
     <div
-      className={`popup popup_place_${name} ${
+      className={`popup popup_place_${name} section ${
         isPopupOpened ? 'popup_opened' : ''
       }`}
       onClick={() => closePopup()}
     >
       <div
-        className='popup__container'
-        style={name === 'project' ? { padding: 30 } : { padding: 0 }}
+        className='popup__container section__container'
+        style={
+          name === 'project'
+            ? { paddingRight: 30, paddingBottom: 30, paddingLeft: 30, paddingTop: 15 }
+            : { padding: 0 }
+        }
         onClick={(e) => e.stopPropagation()}
       >
         {children}

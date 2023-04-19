@@ -10,7 +10,6 @@
   height: 100vh;
   visibility: hidden;
   opacity: 0;
-  /* transition: visibility 0.5s, opacity ease 0.5s; */
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
@@ -22,7 +21,6 @@
 
 .popup__container {
   position: relative;
-  width: fit-content;
   height: fit-content;
   max-height: 90vh;
   background-color: #e5e5e5;
@@ -32,13 +30,35 @@
   overflow: auto;
 }
 
+.popup__container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.popup__container:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.popup__container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.popup__container::-webkit-scrollbar-thumb {
+  opacity: 0;
+}
+
+.popup__container:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
 .popup__close-button {
   position: absolute;
   top: 0px;
   right: 5px;
   border: none;
   background-color: transparent;
-  color: #2e3d41;
+  color: #516a70;
   padding: 0;
   margin: 0;
   text-indent: 0;
