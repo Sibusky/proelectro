@@ -1,7 +1,7 @@
 import './App.css';
 
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import Layout from '../Layout/Layout';
 import Info from '../Info/Info';
@@ -37,11 +37,20 @@ function App() {
     link: '',
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scroll, setScroll] = useState(window.scrollY);
+  const [scroll, setScroll] = useState(window.pageYOffset);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setIsPopupWithProjectOpened(false);
+    }
+  }, [location]);
 
   const handleScroll = debounce(() => {
-    setScroll(window.scrollY);
-  }, 100);
+    setScroll(window.pageYOffset);
+  }, 0);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -71,12 +80,9 @@ function App() {
     setIsMenuOpen(true);
   };
 
-  const navigate = useNavigate();
-
   const closePopupWithProject = () => {
     setIsPopupWithProjectOpened(false);
     navigate(-1);
-    setScroll(1000);
   };
 
   const handleCardClick = (id, title, description, images) => {
@@ -168,19 +174,6 @@ function App() {
         setIsMenuOpen={setIsMenuOpen}
         windowSize={windowSize}
       />
-      {/* <PopupWithProject
-        isPopupOpened={isPopupWithProjectOpened}
-        closePopup={closePopupWithProject}
-        project={currentProject}
-        handleImageClick={handleImageClick}
-        image={currentImage}
-      />
-      <PopupWithImage
-        isPopupOpened={isPopupWithPhotoOpened}
-        closePopup={closePopupWithImage}
-        project={currentProject}
-        image={currentImage}
-      /> */}
     </div>
   );
 }

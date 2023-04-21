@@ -10,8 +10,6 @@ export default function PopupWithProject({
   handleImageClick,
   image,
 }) {
-  // const { projectId } = useParams();
-
   // Закрытиe popup по esc
   useEffect(() => {
     const closeByEsc = (event) => {
