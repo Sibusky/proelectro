@@ -1,0 +1,62 @@
+.references {
+  margin: 0 auto auto auto;
+  height: 100%;
+}
+
+.feedback {
+}
+
+.feedback__container {
+    width: 70%;
+}
+
+@media screen and (max-width: 1024px) {
+    .feedback__container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .feedback__container {
+        width: 90%;
+    }
+}
+
+.feedback_vk {
+}
+
+#feedback_kupiapp {
+    align-items: center;
+    justify-content: center;
+}
+
+.container_kupiapp {
+
+ /* width: 98%; */
+
+}
+
+@media screen and (max-width: 850px) {
+    .container_kupiapp {
+
+        width: 95%;
+       }
+}
+
+.user_kupiapp {
+}
+
+.row_kupiapp {
+}
+
+.col_name_kupiapp {
+}
+
+.link_kupiapp {
+}
+
+.col_date_kupiapp {
+}
+
+.comment_kupiapp {
+}
