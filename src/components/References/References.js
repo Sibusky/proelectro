@@ -18,6 +18,8 @@ export default function References() {
     );
   }, []);
 
+  console.log(window.feedback_vk)
+
   return (
     <main className='references'>
       <section className='feedback section'>

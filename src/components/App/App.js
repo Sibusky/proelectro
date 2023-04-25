@@ -124,7 +124,7 @@ function App() {
                 windowSize={windowSize}
                 handleClick={handleMenuButtonClick}
                 scroll={scroll}
-                isPopupOpen={isPopupWithProjectOpened || isPopupWithPhotoOpened}
+                isPopupOpen={isPopupWithProjectOpened && isPopupWithPhotoOpened}
               />
             }
           >
