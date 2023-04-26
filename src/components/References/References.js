@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './References.css';
 
 export default function References() {
+  const feedbackRef = useRef();
+
+  // console.log(feedbackRef.current.innerHTML)
+
   //Настройка линтера, чтобы не ругался на отсутсвие feedback_vk
   /* global feedback_vk */
 
   // Загрузка отзывов
-
   useEffect(() => {
     document.addEventListener(
       'DOMContentLoaded',
@@ -18,8 +21,6 @@ export default function References() {
     );
   }, []);
 
-  console.log(window.feedback_vk)
-
   return (
     <main className='references'>
       <section className='feedback section'>
@@ -27,7 +28,8 @@ export default function References() {
           <h2 className='feedback__title section__title'>
             Отзывы о нашей работе
           </h2>
-          <div className='feedback_vk' id='feedback_vk'></div>
+          
+          <div className='feedback_vk' id='feedback_vk' ref={feedbackRef}></div>
         </div>
       </section>
     </main>

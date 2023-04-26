@@ -45,6 +45,7 @@ function App() {
   useEffect(() => {
     if (location.pathname === '/') {
       setIsPopupWithProjectOpened(false);
+      setIsPopupWithPhotoOpened(false)
     }
   }, [location]);
 
@@ -124,7 +125,7 @@ function App() {
                 windowSize={windowSize}
                 handleClick={handleMenuButtonClick}
                 scroll={scroll}
-                isPopupOpen={isPopupWithProjectOpened && isPopupWithPhotoOpened}
+                isPopupOpen={isPopupWithProjectOpened || isPopupWithPhotoOpened}
               />
             }
           >
