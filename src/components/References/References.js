@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './References.css';
+import Spinner from '../UI/Spinner';
 
 export default function References() {
-  const feedbackRef = useRef();
-
-  // console.log(feedbackRef.current.innerHTML)
+  const [fakeFetching, setFakeFetching] = useState(false);
 
   //Настройка линтера, чтобы не ругался на отсутсвие feedback_vk
   /* global feedback_vk */
@@ -21,6 +20,13 @@ export default function References() {
     );
   }, []);
 
+  useEffect(() => {
+    setFakeFetching(true);
+    setTimeout(() => {
+      setFakeFetching(false);
+    }, 1000);
+  }, [setFakeFetching]);
+
   return (
     <main className='references'>
       <section className='feedback section'>
@@ -28,8 +34,11 @@ export default function References() {
           <h2 className='feedback__title section__title'>
             Отзывы о нашей работе
           </h2>
-          
-          <div className='feedback_vk' id='feedback_vk' ref={feedbackRef}></div>
+          {fakeFetching ? <Spinner /> : null}
+          <div
+            className={fakeFetching ? 'feedback_vk_fetching' : 'feedback_vk'}
+            id='feedback_vk'
+          ></div>
         </div>
       </section>
     </main>

@@ -2,6 +2,7 @@ import React from 'react';
 import './Projects.css';
 import ProjectCard from './ProjectCard/ProjectCard';
 import { Link } from 'react-router-dom';
+import Spinner from '../../UI/Spinner';
 
 export default function Projects({ projects, isFetching, handleClick }) {
   return (
@@ -9,24 +10,15 @@ export default function Projects({ projects, isFetching, handleClick }) {
       <div className='projects__container section__container'>
         <h2 className='projects__title section__title'>Выполненные проекты</h2>
         {isFetching ? (
-          <div className='projects__spinner'>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <Spinner />
         ) : (
           <div className='projects__grid'>
             {projects.map((project) => (
-              <Link className='project__grid-link' to={`project/${project.id}`} key={project.id}>
+              <Link
+                className='project__grid-link'
+                to={`project/${project.id}`}
+                key={project.id}
+              >
                 <ProjectCard
                   id={project.id}
                   title={project.title}

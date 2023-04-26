@@ -22,7 +22,12 @@
     }
 }
 
+.feedback_vk_fetching {
+    display: none;
+}
+
 .feedback_vk {
+    display: block;
 }
 
 #feedback_kupiapp {
