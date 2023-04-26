@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/proelectro/static/css/main.5ee9ed92.css",
-    "main.js": "/proelectro/static/js/main.98029bdc.js",
+    "main.js": "/proelectro/static/js/main.2a713e78.js",
     "static/js/787.0ae25950.chunk.js": "/proelectro/static/js/787.0ae25950.chunk.js",
     "static/media/lead-img-1.jpg": "/proelectro/static/media/lead-img-1.9bd2050ce68bad9b7c7c.jpg",
     "static/media/lead-img-3.jpg": "/proelectro/static/media/lead-img-3.2379edb57aa50c45e307.jpg",
@@ -42,11 +42,11 @@
     "static/media/icon-electric-panel.png": "/proelectro/static/media/icon-electric-panel.bb923978a97e6679d540.png",
     "index.html": "/proelectro/index.html",
     "main.5ee9ed92.css.map": "/proelectro/static/css/main.5ee9ed92.css.map",
-    "main.98029bdc.js.map": "/proelectro/static/js/main.98029bdc.js.map",
+    "main.2a713e78.js.map": "/proelectro/static/js/main.2a713e78.js.map",
     "787.0ae25950.chunk.js.map": "/proelectro/static/js/787.0ae25950.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5ee9ed92.css",
-    "static/js/main.98029bdc.js"
+    "static/js/main.2a713e78.js"
   ]
 }
