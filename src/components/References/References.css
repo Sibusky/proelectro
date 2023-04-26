@@ -3,9 +3,6 @@
   height: 100%;
 }
 
-.feedback {
-}
-
 .feedback__container {
   width: 70%;
 }
@@ -27,7 +24,6 @@
   border: 1px solid rgb(200, 200, 200);
   border-radius: 8px;
   overflow: hidden;
-  
 }
 
 .feedback__browser {
@@ -51,11 +47,23 @@
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 400px) {
+  .feedback__tab-bar {
+    padding: 0 10px;
+  }
+}
+
 .feedback__dot-buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 20px 0 0;
+}
+
+@media screen and (max-width: 450px) {
+  .feedback__dot-buttons {
+    margin: 0 10px 0 0;
+  }
 }
 
 .feedback__dot-button {
@@ -84,6 +92,18 @@
   align-self: flex-end;
   padding: 0 15px;
   margin: 0 20px 0 0;
+}
+
+@media screen and (max-width: 450px) {
+  .feedback__tab {
+    margin: 0 10px 0 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .feedback__tab {
+    width: 150px;
+  }
 }
 
 .feedback__tab-vk-logo {
@@ -149,6 +169,18 @@
   margin: 0 30px 0 0;
 }
 
+@media screen and (max-width: 600px) {
+  .feedback__navigate-buttons {
+    margin: 0 20px 0 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .feedback__navigate-buttons {
+    margin: 0 10px 0 0;
+  }
+}
+
 .feedback__navigate-buttons p {
   color: rgb(120, 120, 120);
 }
@@ -169,8 +201,21 @@
   width: 100%;
 }
 
+@media screen and (max-width: 400px) {
+  .feedback__query-input {
+    padding: 5px 10px;
+  }
+}
+
 .feedback__query {
   text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+  .feedback__query-text {
+    font-size: 14px;
+    line-height: 15px;
+  }
 }
 
 .feedback_vk_fetching {
@@ -186,30 +231,27 @@
   justify-content: center;
 }
 
-.container_kupiapp {
-  /* width: 98%; */
-}
-
 @media screen and (max-width: 850px) {
   .container_kupiapp {
     width: 95%;
   }
 }
 
-.user_kupiapp {
-}
-
-.row_kupiapp {
-}
-
-.col_name_kupiapp {
-}
-
-.link_kupiapp {
-}
-
-.col_date_kupiapp {
-}
-
 .comment_kupiapp {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  letter-spacing: 0;
+  margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 500px) {
+  .comment_kupiapp {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
