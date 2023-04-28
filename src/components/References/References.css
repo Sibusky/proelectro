@@ -107,12 +107,12 @@
 }
 
 .feedback__tab-vk-logo {
-  background-image: url('../../images/vk-logo.png');
+  background-image: url('../../images/vk-logo-small.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 23px;
-  height: 20px;
+  background-size: contain;
+  width: 21px;
+  height: 21px;
   margin: 0 5px 0 0;
 }
 
