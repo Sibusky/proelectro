@@ -28,7 +28,7 @@ export default function References() {
   }, [setFakeFetching]);
 
   return (
-    <main className='references'>
+    <main className='main'>
       <section className='feedback section'>
         <div className='feedback__container section__container'>
           <h2 className='feedback__title section__title'>

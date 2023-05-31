@@ -8,7 +8,7 @@ import Skills from './Skills/Skills';
 
 export default function Info({ projects, isFetching, handleClick }) {
   return (
-    <main className='info'>
+    <main className='main'>
       <Lead />
       <About />
       <Skills />
