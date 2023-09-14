@@ -139,7 +139,12 @@ function App() {
               }
             />
             <Route path='references' element={<References />} />
-            <Route path='prices' element={<Prices />} />
+            <Route path='prices' element={<Prices 
+            
+            projects={projects}
+
+            
+            />} />
             <Route path='contacts' element={<Contacts />} />
             <Route path='videos' element={<Videos />} />
             <Route path='*' element={<PageNotFound />} />

@@ -1,12 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ProjectCard from '../components/Projects/ProjectCard';
 
-export default function Prices() {
+export default function Prices({ projects }) {
   return (
     <main className='main'>
       <section className='prices section'>
         <div className='prices__container section__container'>
           <h2 className='prices__title section__title'>
+            Примерная стоимость на комплексный монтаж проводки
+          </h2>
+
+          <div className='projects__grid'>
+            {projects.map((project) => (
+              <Link
+                className='project__grid-link'
+                to={`project/${project.id}`}
+                key={project.id}
+              >
+                <ProjectCard
+                  id={project.id}
+                  title={project.title}
+                  description={project.description}
+                  images={project.images}
+                //   handleClick={handleClick}
+                />
+              </Link>
+            ))}
+          </div>
+
+
+          {/* <h2 className='prices__title section__title'>
             Примерная стоимость черновых работ по монтажу всей электропроводки
             со сборкой распределительного щита*
           </h2>
@@ -22,24 +46,24 @@ export default function Prices() {
                   </label>
                   <input
                     className='calc__input section__text'
-                    // {
-                    //   errors.password
-                    //     ? 'calc__input calc__input-error'
-                    //     : 'calc__input'
-                    // }
+                    {
+                      errors.password
+                        ? 'calc__input calc__input-error'
+                        : 'calc__input'
+                    }
                     id='calc__input-area'
                     type='number'
                     placeholder='Площадь'
-                    // pattern='^\d+$'
+                    pattern='^\d+$'
                     name='area'
                     minLength='1'
                     max='300'
-                    // onChange={handleChange}
-                    // value={values.password ? values.password : ''}
+                    onChange={handleChange}
+                    value={values.password ? values.password : ''}
                     required
                   />
                   <span id='error-calc-area' className='calc__error'>
-                    {/* {errors.password} */}
+                    {errors.password}
                   </span>
                 </li>
                 <li className='calc__input-item'>
@@ -194,7 +218,7 @@ export default function Prices() {
             <Link className='steps__list-item-link section__text' to='/contacts'>
                 Связаться с нами
               </Link>
-          </form>
+          </form> */}
         </div>
       </section>
     </main>
