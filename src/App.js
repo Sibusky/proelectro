@@ -5,7 +5,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import Layout from './components/Layout';
 import PopupWithProject from './components/PopupWithProject';
-import { fetchProjects } from './api/fetchProjects';
+import { fetchPrices, fetchProjects } from './api/fetchProjects';
 import PopupWithImage from './components/PopupWithImage';
 import MenuModal from './components/Header/MenuModal';
 import Info from './pages/info';
@@ -23,6 +23,7 @@ function App() {
     useState(false);
   const [isPopupWithPhotoOpened, setIsPopupWithPhotoOpened] = useState(false);
   const [projects, setProjects] = useState([]);
+  const [prices, setPrices] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [currentProject, setCurrentProject] = useState({
     id: '',
@@ -72,6 +73,14 @@ function App() {
     setIsFetching(true);
     fetchProjects
       .then((res) => setProjects(res))
+      .catch((err) => console.error(err))
+      .finally(() => setIsFetching(false));
+  }, []);
+
+  useEffect(() => {
+    setIsFetching(true);
+    fetchPrices
+      .then((res) => setPrices(res))
       .catch((err) => console.error(err))
       .finally(() => setIsFetching(false));
   }, []);
@@ -139,12 +148,10 @@ function App() {
               }
             />
             <Route path='references' element={<References />} />
-            <Route path='prices' element={<Prices 
-            
-            projects={projects}
-
-            
-            />} />
+            <Route
+              path='prices'
+              element={<Prices prices={prices} handleClick={handleCardClick} />}
+            />
             <Route path='contacts' element={<Contacts />} />
             <Route path='videos' element={<Videos />} />
             <Route path='*' element={<PageNotFound />} />
@@ -167,6 +174,18 @@ function App() {
                   isPopupOpened={isPopupWithPhotoOpened}
                   closePopup={closePopupWithImage}
                   project={currentProject}
+                  image={currentImage}
+                />
+              }
+            />
+            <Route
+              path='prices/price/:priceId'
+              element={
+                <PopupWithProject
+                  isPopupOpened={isPopupWithProjectOpened}
+                  closePopup={closePopupWithProject}
+                  project={currentProject}
+                  handleImageClick={handleImageClick}
                   image={currentImage}
                 />
               }

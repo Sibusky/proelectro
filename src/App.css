@@ -119,6 +119,11 @@ main {
   cursor: pointer;
 }
 
+/* Нет курсора pointer на карточках с ценами */
+.prices__grid > .card {
+  cursor: default;
+}
+
 .card:hover {
   scale: 1.01;
   filter: grayscale(0);

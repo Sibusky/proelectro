@@ -5,6 +5,7 @@
 
 .carousel__slide {
   width: 100%;
+  display: flex;
 }
 
 .carousel__image {
@@ -23,4 +24,8 @@
 
 .swiper-pagination-bullet-active {
   background: #647065;
+}
+
+.swiper-slide {
+  display: flex;
 }

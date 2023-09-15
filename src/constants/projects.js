@@ -390,7 +390,7 @@ export const projects = [
   {
     id: 6,
     title: 'Сборка трёхфазного щита для загородного дома в д. Тимонино',
-    description: 'Трёхфазный щит на базе автоматики Resi9.',
+    description: 'Трёхфазный щит на базе автоматики Resi9 в деревне Тимонино.',
     images: [
       {
         id: 1,
@@ -677,6 +677,12 @@ export const projects = [
         caption: 'Смонтированное модульное заземление загородного дома.',
         link: require('../images/projects/wip/14.jpg'),
         preview: require('../images/projects/wip/preview/14.jpg'),
+      },
+      {
+        id: 15,
+        caption: 'Чистовая установка на объекте из бруса со скрытой проводкой.',
+        link: require('../images/projects/wip/15.jpg'),
+        preview: require('../images/projects/wip/preview/15.jpg'),
       },
     ],
   },
