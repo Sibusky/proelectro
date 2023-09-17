@@ -3,7 +3,7 @@ import './styles.css';
 
 export default function PricesTable({ priceList }) {
 
-    console.log(priceList, 'price list in price table')
+    // console.log(priceList, 'price list in price table')
   return (
     <section className='prices-table section'>
       <div className='prices-table__container section__container'>

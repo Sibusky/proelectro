@@ -21,11 +21,15 @@ export default function Header({
         <div className='header__logo-and-phones'>
           <Logo />
           <ul className='header__phones'>
-            <li className='header__phone section__text'>
-              +7-900-501-12-50 Михаил
+            <li className='header__phone'>
+              <a href='tel:+79005011250' className='section__text'>
+                +7 (900) 501-12-50 Михаил
+              </a>
             </li>
-            <li className='header__phone section__text'>
-              +7-911-537-56-66 Роман
+            <li className='header__phone'>
+              <a href='tel:+79212307220' className='section__text'>
+                +7 (921) 230-72-20 Роман
+              </a>
             </li>
           </ul>
         </div>

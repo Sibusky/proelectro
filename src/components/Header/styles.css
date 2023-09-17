@@ -73,9 +73,15 @@
 }
 
 @media screen and (max-width: 500px) {
-  .header__phone {
+  .header__phone > .section__text {
     font-size: 12px;
     line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header__phone > .section__text {
+    font-size: 10px;
   }
 }
 

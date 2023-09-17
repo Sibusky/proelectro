@@ -1,12 +1,9 @@
 import './App.css';
-
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import debounce from 'lodash.debounce';
-import { collection, getDocs } from 'firebase/firestore';
 import Layout from './components/Layout';
 import PopupWithProject from './components/PopupWithProject';
-import { fetchCards } from './api/fetchData';
 import PopupWithImage from './components/PopupWithImage';
 import MenuModal from './components/Header/MenuModal';
 import Info from './pages/info';
@@ -15,8 +12,7 @@ import Prices from './pages/prices';
 import Contacts from './pages/contacts';
 import Videos from './pages/videos';
 import PageNotFound from './pages/page-not-found';
-import { db } from './constants/firebaseConfig';
-
+import { fetchCards, fetchPriceList } from './api/fetchData';
 import { projects } from './constants/projects';
 import { prices } from './constants/prices';
 
@@ -43,25 +39,7 @@ function App() {
     link: '',
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scroll, setScroll] = useState(window.pageYOffset);
-
-  async function downloadFromFirestore(collectionName) {
-    const collectionRef = collection(db, collectionName);
-    const querySnapshot = await getDocs(collectionRef);
-    const data = querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
-    return data;
-  }
-
-  useEffect(() => {
-    setIsFetching(true);
-    downloadFromFirestore('prices')
-      .then((res) => setPriceList(res))
-      .catch((err) => console.error(err))
-      .finally(() => setIsFetching(false));
-  }, []);
+  const [scroll, setScroll] = useState(window.scrollY);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -73,25 +51,23 @@ function App() {
     }
   }, [location]);
 
-  const handleScroll = debounce(() => {
-    setScroll(window.pageYOffset);
-  }, 0);
-
   useEffect(() => {
+    const handleScroll = debounce(() => {
+      setScroll(window.scrollY);
+    }, 0);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  const handleResize = debounce(() => {
-    setWindowSize(document.documentElement.clientWidth);
-  }, 100);
+  }, []);
 
   useEffect(() => {
+    const handleResize = debounce(() => {
+      setWindowSize(document.documentElement.clientWidth);
+    }, 100);
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [handleResize]);
+  }, []);
 
   useEffect(() => {
     setIsFetching(true);
@@ -105,6 +81,14 @@ function App() {
     setIsFetching(true);
     fetchCards(prices)
       .then((res) => setPriceCards(res))
+      .catch((err) => console.error(err))
+      .finally(() => setIsFetching(false));
+  }, []);
+
+  useEffect(() => {
+    setIsFetching(true);
+    fetchPriceList('prices')
+      .then((res) => setPriceList(res))
       .catch((err) => console.error(err))
       .finally(() => setIsFetching(false));
   }, []);
