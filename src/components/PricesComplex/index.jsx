@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectCard from '../../components/Projects/ProjectCard';
+import { fetchCards } from '../../api/fetchData';
+import { prices } from '../../constants/prices';
+import { useFetchData } from '../../hooks/useFetchData';
 
 import './styles.css';
 
-export default function PricesComplex({ priceCards, handleClick }) {
+export default function PricesComplex({ handleClick }) {
+  const [priceCards, setPriceCards] = useState([]);
+  const [isFetching] = useFetchData(fetchCards(prices), setPriceCards);
+
   return (
     <section className='prices-complex section'>
       <div className='prices-complex__container section__container'>

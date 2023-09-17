@@ -10,7 +10,7 @@ export function fetchCards(data) {
   return new Promise((resolve, reject) => {
     return setTimeout(() => {
       resolve(data);
-    }, 2000);
+    }, 1000);
   }).then((res) => checkResponce(res));
 }
 

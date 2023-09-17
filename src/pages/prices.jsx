@@ -2,11 +2,11 @@ import React from 'react';
 import PricesComplex from '../components/PricesComplex';
 import PricesTable from '../components/PricesTable';
 
-export default function Prices({ priceCards, priceList, handleClick }) {
+export default function Prices({ handleClick }) {
   return (
     <main className='main'>
-      <PricesComplex priceCards={priceCards} handleClick={handleClick} />
-      <PricesTable priceList={priceList} />
+      <PricesComplex handleClick={handleClick} />
+      <PricesTable />
     </main>
   );
 }

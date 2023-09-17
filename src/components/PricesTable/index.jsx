@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useFetchData } from '../../hooks/useFetchData';
+import { fetchPriceList } from '../../api/fetchData';
+
 import './styles.css';
 
-export default function PricesTable({ priceList }) {
+export default function PricesTable() {
+  const [priceList, setPriceList] = useState([]);
+  const [isFetching] = useFetchData(fetchPriceList('prices'), setPriceList);
 
-    // console.log(priceList, 'price list in price table')
   return (
     <section className='prices-table section'>
       <div className='prices-table__container section__container'>

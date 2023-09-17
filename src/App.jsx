@@ -1,7 +1,8 @@
-import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import debounce from 'lodash.debounce';
+
+import './App.css';
 import Layout from './components/Layout';
 import PopupWithProject from './components/PopupWithProject';
 import PopupWithImage from './components/PopupWithImage';
@@ -12,9 +13,6 @@ import Prices from './pages/prices';
 import Contacts from './pages/contacts';
 import Videos from './pages/videos';
 import PageNotFound from './pages/page-not-found';
-import { fetchCards, fetchPriceList } from './api/fetchData';
-import { projects } from './constants/projects';
-import { prices } from './constants/prices';
 
 function App() {
   const [windowSize, setWindowSize] = useState(
@@ -23,10 +21,6 @@ function App() {
   const [isPopupWithProjectOpened, setIsPopupWithProjectOpened] =
     useState(false);
   const [isPopupWithPhotoOpened, setIsPopupWithPhotoOpened] = useState(false);
-  const [projectCards, setProjectCards] = useState([]);
-  const [priceCards, setPriceCards] = useState([]);
-  const [priceList, setPriceList] = useState([]);
-  const [isFetching, setIsFetching] = useState(false);
   const [currentProject, setCurrentProject] = useState({
     id: '',
     title: '',
@@ -67,30 +61,6 @@ function App() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
-
-  useEffect(() => {
-    setIsFetching(true);
-    fetchCards(projects)
-      .then((res) => setProjectCards(res))
-      .catch((err) => console.error(err))
-      .finally(() => setIsFetching(false));
-  }, []);
-
-  useEffect(() => {
-    setIsFetching(true);
-    fetchCards(prices)
-      .then((res) => setPriceCards(res))
-      .catch((err) => console.error(err))
-      .finally(() => setIsFetching(false));
-  }, []);
-
-  useEffect(() => {
-    setIsFetching(true);
-    fetchPriceList('prices')
-      .then((res) => setPriceList(res))
-      .catch((err) => console.error(err))
-      .finally(() => setIsFetching(false));
   }, []);
 
   const handleMenuButtonClick = () => {
@@ -145,26 +115,11 @@ function App() {
               />
             }
           >
-            <Route
-              index
-              element={
-                <Info
-                  projectCards={projectCards}
-                  isFetching={isFetching}
-                  handleClick={handleCardClick}
-                />
-              }
-            />
+            <Route index element={<Info handleClick={handleCardClick} />} />
             <Route path='references' element={<References />} />
             <Route
               path='prices'
-              element={
-                <Prices
-                  priceCards={priceCards}
-                  priceList={priceList}
-                  handleClick={handleCardClick}
-                />
-              }
+              element={<Prices handleClick={handleCardClick} />}
             />
             <Route path='contacts' element={<Contacts />} />
             <Route path='videos' element={<Videos />} />
