@@ -3,9 +3,10 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import debounce from 'lodash.debounce';
+import { collection, getDocs } from 'firebase/firestore';
 import Layout from './components/Layout';
 import PopupWithProject from './components/PopupWithProject';
-import { fetchPrices, fetchProjects } from './api/fetchProjects';
+import { fetchCards } from './api/fetchData';
 import PopupWithImage from './components/PopupWithImage';
 import MenuModal from './components/Header/MenuModal';
 import Info from './pages/info';
@@ -14,6 +15,10 @@ import Prices from './pages/prices';
 import Contacts from './pages/contacts';
 import Videos from './pages/videos';
 import PageNotFound from './pages/page-not-found';
+import { db } from './constants/firebaseConfig';
+
+import { projects } from './constants/projects';
+import { prices } from './constants/prices';
 
 function App() {
   const [windowSize, setWindowSize] = useState(
@@ -22,8 +27,9 @@ function App() {
   const [isPopupWithProjectOpened, setIsPopupWithProjectOpened] =
     useState(false);
   const [isPopupWithPhotoOpened, setIsPopupWithPhotoOpened] = useState(false);
-  const [projects, setProjects] = useState([]);
-  const [prices, setPrices] = useState([]);
+  const [projectCards, setProjectCards] = useState([]);
+  const [priceCards, setPriceCards] = useState([]);
+  const [priceList, setPriceList] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [currentProject, setCurrentProject] = useState({
     id: '',
@@ -38,6 +44,24 @@ function App() {
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scroll, setScroll] = useState(window.pageYOffset);
+
+  async function downloadFromFirestore(collectionName) {
+    const collectionRef = collection(db, collectionName);
+    const querySnapshot = await getDocs(collectionRef);
+    const data = querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    return data;
+  }
+
+  useEffect(() => {
+    setIsFetching(true);
+    downloadFromFirestore('prices')
+      .then((res) => setPriceList(res))
+      .catch((err) => console.error(err))
+      .finally(() => setIsFetching(false));
+  }, []);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -71,16 +95,16 @@ function App() {
 
   useEffect(() => {
     setIsFetching(true);
-    fetchProjects
-      .then((res) => setProjects(res))
+    fetchCards(projects)
+      .then((res) => setProjectCards(res))
       .catch((err) => console.error(err))
       .finally(() => setIsFetching(false));
   }, []);
 
   useEffect(() => {
     setIsFetching(true);
-    fetchPrices
-      .then((res) => setPrices(res))
+    fetchCards(prices)
+      .then((res) => setPriceCards(res))
       .catch((err) => console.error(err))
       .finally(() => setIsFetching(false));
   }, []);
@@ -141,7 +165,7 @@ function App() {
               index
               element={
                 <Info
-                  projects={projects}
+                  projectCards={projectCards}
                   isFetching={isFetching}
                   handleClick={handleCardClick}
                 />
@@ -150,7 +174,13 @@ function App() {
             <Route path='references' element={<References />} />
             <Route
               path='prices'
-              element={<Prices prices={prices} handleClick={handleCardClick} />}
+              element={
+                <Prices
+                  priceCards={priceCards}
+                  priceList={priceList}
+                  handleClick={handleCardClick}
+                />
+              }
             />
             <Route path='contacts' element={<Contacts />} />
             <Route path='videos' element={<Videos />} />

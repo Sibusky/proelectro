@@ -5,7 +5,7 @@ import Lead from '../components/Lead';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 
-export default function Info({ projects, isFetching, handleClick }) {
+export default function Info({ projectCards, isFetching, handleClick }) {
   return (
     <main className='main'>
       <Lead />
@@ -13,7 +13,7 @@ export default function Info({ projects, isFetching, handleClick }) {
       <Skills />
       <Steps />
       <Projects
-        projects={projects}
+        projectCards={projectCards}
         isFetching={isFetching}
         handleClick={handleClick}
       />

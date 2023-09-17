@@ -120,7 +120,7 @@ main {
 }
 
 /* Нет курсора pointer на карточках с ценами */
-.prices__grid > .card {
+.prices-complex__grid > .card {
   cursor: default;
 }
 

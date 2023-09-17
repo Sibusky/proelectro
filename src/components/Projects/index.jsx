@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 import { Link } from 'react-router-dom';
 import Spinner from '../UI/Spinner';
 
-export default function Projects({ projects, isFetching, handleClick }) {
+export default function Projects({ projectCards, isFetching, handleClick }) {
   return (
     <section className='projects section'>
       <div className='projects__container section__container'>
@@ -13,7 +13,7 @@ export default function Projects({ projects, isFetching, handleClick }) {
           <Spinner />
         ) : (
           <div className='projects__grid'>
-            {projects.map((project) => (
+            {projectCards.map((project) => (
               <Link
                 className='project__grid-link'
                 to={`project/${project.id}`}
