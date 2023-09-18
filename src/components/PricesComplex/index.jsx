@@ -5,6 +5,7 @@ import { prices } from '../../constants/prices';
 import { useFetchData } from '../../hooks/useFetchData';
 
 import './styles.css';
+import Spinner from '../UI/Spinner';
 
 export default function PricesComplex({ handleClick }) {
   const [priceCards, setPriceCards] = useState([]);
@@ -16,18 +17,22 @@ export default function PricesComplex({ handleClick }) {
         <h2 className='prices-complex__title section__title'>
           Стоимость работ на комплексный монтаж проводки (за кв.м площади)
         </h2>
-        <div className='projects__grid prices-complex__grid'>
-          {priceCards.map((price) => (
-            <ProjectCard
-              key={price.id}
-              id={price.id}
-              title={price.title}
-              description={price.description}
-              images={price.images}
-              handleClick={handleClick}
-            />
-          ))}
-        </div>
+        {isFetching ? (
+          <Spinner />
+        ) : (
+          <div className='projects__grid prices-complex__grid'>
+            {priceCards.map((price) => (
+              <ProjectCard
+                key={price.id}
+                id={price.id}
+                title={price.title}
+                description={price.description}
+                images={price.images}
+                handleClick={handleClick}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

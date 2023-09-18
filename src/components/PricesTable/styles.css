@@ -1,0 +1,89 @@
+.prices-table__table {
+  margin-bottom: 20px !important;
+}
+
+@media screen and (max-width: 460px) {
+  .prices-table__table {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .prices-table__table {
+    font-size: 10px;
+  }
+}
+
+.table {
+  border: 2px solid lightgray;
+}
+
+table {
+  width: 100%;
+  overflow: auto;
+}
+
+.table__head {
+  background-color: #d1d1d1;
+}
+
+.table__row {
+}
+
+.table__cell {
+  border: 1px solid lightgray;
+  height: 26px;
+  padding: 5px;
+}
+
+.table__cell_wider {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.table__head-cell {
+}
+
+.table__body {
+}
+
+.table__cell-result {
+  text-align: right !important;
+}
+
+.table__body-cell {
+  text-align: center;
+}
+
+.table__body-cell:first-of-type {
+  text-align: left;
+}
+
+.prices-table__input {
+  text-align: center;
+  width: 70px;
+  border: 1px solid lightgray;
+  background-color: #f9f9f9;
+}
+
+.prices-table__input::placeholder {
+  color: lightgray;
+}
+
+@media screen and (max-width: 730px) {
+  .prices-table__input {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .prices-table__input {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .prices-table__input {
+    width: 35px;
+  }
+}

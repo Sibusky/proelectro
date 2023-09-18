@@ -38,30 +38,30 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const handleScroll = debounce(() => {
+    setScroll(window.scrollY);
+  }, 0);
+
+  const handleResize = debounce(() => {
+    setWindowSize(window.innerWidth);
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
+
   useEffect(() => {
     if (location.pathname === '/') {
       setIsPopupWithProjectOpened(false);
       setIsPopupWithPhotoOpened(false);
     }
   }, [location]);
-
-  useEffect(() => {
-    const handleScroll = debounce(() => {
-      setScroll(window.scrollY);
-    }, 0);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = debounce(() => {
-      setWindowSize(document.documentElement.clientWidth);
-    }, 100);
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const handleMenuButtonClick = () => {
     setIsMenuOpen(true);

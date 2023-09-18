@@ -29,7 +29,7 @@ export const prices = [
 
   {
     id: 3,
-    title: 'Ретропроводка - от 1200 руб / кв.м',
+    title: 'Ретропроводка - от 1200 руб',
     description:
       '',
     images: [

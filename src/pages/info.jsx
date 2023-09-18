@@ -5,18 +5,14 @@ import Lead from '../components/Lead';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 
-export default function Info({ projectCards, isFetching, handleClick }) {
+export default function Info({ handleClick }) {
   return (
     <main className='main'>
       <Lead />
       <About />
       <Skills />
       <Steps />
-      <Projects
-        projectCards={projectCards}
-        isFetching={isFetching}
-        handleClick={handleClick}
-      />
+      <Projects handleClick={handleClick} />
     </main>
   );
 }
