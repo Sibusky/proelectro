@@ -5,18 +5,17 @@ import { formattedPrice } from '../../utils/utils';
 import { priceListData } from '../../constants/priceListData';
 import TableRow from '../TableRow';
 import Spinner from '../UI/Spinner';
+import Button from '../Button';
 
 import './styles.css';
-import Button from '../Button';
 
 export default function PricesTable() {
   const [priceList, setPriceList] = useState([]);
-  const [isFetching] = useFetchData(fetchPriceList('prices123'), setPriceList);
-
   const [totalRows, setTotalRows] = useState([]);
   const [totalCost, setTotalCost] = useState();
+  const [isFetching] = useFetchData(fetchPriceList('prices'), setPriceList);
 
-  const handleTotal = useCallback(
+  const calculateTotalCost = useCallback(
     (id, cost) => {
       const rowCost = { id, cost };
       setTotalRows((prevState) => {
@@ -41,7 +40,6 @@ export default function PricesTable() {
         <h2 className='prices-table__title section__title'>
           Стоимость отдельных видов работ
         </h2>
-
         {isFetching ? (
           <Spinner />
         ) : (
@@ -78,7 +76,7 @@ export default function PricesTable() {
                     title={price.title}
                     unit={price.unit}
                     price={price.price}
-                    handleTotal={handleTotal}
+                    calculateTotalCost={calculateTotalCost}
                   />
                 ))}
               <tr className='prices-table__row table__row'>
