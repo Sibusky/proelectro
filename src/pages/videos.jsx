@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import VideoContainer from '../components/VideoContainer';
 
 export default function Videos() {
   return (
-    <div>
-        <h3>Videos</h3>
-    </div>
-  )
+    <main className='main'>
+      <VideoContainer />
+    </main>
+  );
 }
