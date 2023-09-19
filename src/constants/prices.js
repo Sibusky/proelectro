@@ -43,7 +43,7 @@ export const prices = [
   },
   {
     id: 4,
-    title: 'Скрытая проводка в дереве от 1200 руб',
+    title: 'Скрытая проводка в дереве от 1300 руб',
     description:
       '',
     images: [

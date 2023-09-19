@@ -1,0 +1,25 @@
+.contacts__container {
+  align-items: flex-start;
+}
+
+.contacts__text {
+  line-height: 30px;
+}
+
+.contacts__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts__item{
+    padding: 10px 0;
+}
+
+.contacts__item-title {
+  font-weight: 700;
+}
+
+.contacts__item-link {
+  text-decoration: underline;
+}

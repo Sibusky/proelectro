@@ -1,7 +1,10 @@
 import React from 'react'
+import ContactsContainer from '../components/ContactsContainer'
 
 export default function Contacts() {
   return (
-    <div>contacts</div>
+    <main className='main'>
+      <ContactsContainer />
+    </main>
   )
 }

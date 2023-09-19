@@ -15,7 +15,6 @@ export default function VideoContainer() {
                 className='video__iframe'
                 title={video.title}
                 src={`https://www.youtube.com/embed/${video.embedUrl}`}
-                border='0'
                 allowFullScreen
               ></iframe>
             </li>

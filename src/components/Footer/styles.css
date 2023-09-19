@@ -1,3 +1,8 @@
+.footer {
+  margin-top: auto;
+  background-color: lightgray;
+}
+
 .footer__container {
   flex-direction: row;
   justify-content: space-between;
