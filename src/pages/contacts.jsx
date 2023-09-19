@@ -1,10 +1,12 @@
-import React from 'react'
-import ContactsContainer from '../components/ContactsContainer'
+import React from 'react';
+import ContactsContainer from '../components/ContactsContainer';
+import ApplicationForm from '../components/ApplicationForm';
 
-export default function Contacts() {
+export default function Contacts({ submitApplication, submitStatus, isFetching }) {
   return (
     <main className='main'>
       <ContactsContainer />
+      <ApplicationForm submitApplication={submitApplication} submitStatus={submitStatus} isFetching={isFetching} />
     </main>
-  )
+  );
 }

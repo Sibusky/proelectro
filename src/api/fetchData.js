@@ -1,6 +1,8 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../constants/firebaseConfig';
 
+const baseUrl = 'http://localhost:3001';
+
 function checkResponce(res) {
   return res ? res : Promise.reject(res, 'Ошибка загрузки данных');
 }
@@ -28,4 +30,15 @@ export function fetchPriceList(collectionName) {
         ...doc.data(),
       }))
     );
+}
+
+// POST new application
+export function postNewApplication(application) {
+  return fetch(`${baseUrl}/submit`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(application),
+  }).then((res) => checkResponce(res));
 }

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 
+import { SENT, FETCH_ERROR, SUBMIT_ERROR } from './constants/globalConstants';
+
 import './App.css';
 import Layout from './components/Layout';
 import PopupWithProject from './components/PopupWithProject';
@@ -13,6 +15,7 @@ import Prices from './pages/prices';
 import Contacts from './pages/contacts';
 import Videos from './pages/videos';
 import PageNotFound from './pages/page-not-found';
+import { postNewApplication } from './api/fetchData';
 
 function App() {
   const [windowSize, setWindowSize] = useState(
@@ -33,6 +36,8 @@ function App() {
     link: '',
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+  const [isFetching, setIsFetching] = useState(false);
   const [scroll, setScroll] = useState(window.scrollY);
 
   const location = useLocation();
@@ -101,6 +106,19 @@ function App() {
     navigate(-1);
   };
 
+  const submitApplication = (payload) => {
+    setIsFetching(true);
+    postNewApplication(payload)
+      .then((res) => {
+        setIsFetching(false);
+        res.ok ? setSubmitStatus(SENT) : Promise.reject(res, FETCH_ERROR);
+      })
+      .catch((err) => {
+        setIsFetching(false);
+        setSubmitStatus(SUBMIT_ERROR);
+      });
+  };
+
   return (
     <div className='App'>
       <Routes>
@@ -121,7 +139,16 @@ function App() {
               path='prices'
               element={<Prices handleClick={handleCardClick} />}
             />
-            <Route path='contacts' element={<Contacts />} />
+            <Route
+              path='contacts'
+              element={
+                <Contacts
+                  submitApplication={submitApplication}
+                  submitStatus={submitStatus}
+                  isFetching={isFetching}
+                />
+              }
+            />
             <Route path='videos' element={<Videos />} />
             <Route path='*' element={<PageNotFound />} />
             <Route
