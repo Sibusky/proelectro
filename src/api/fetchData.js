@@ -1,7 +1,7 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../constants/firebaseConfig';
 
-const baseUrl = 'http://localhost:3001';
+const baseUrl = 'https://send-an-email.onrender.com';
 
 function checkResponce(res) {
   return res ? res : Promise.reject(res, 'Ошибка загрузки данных');

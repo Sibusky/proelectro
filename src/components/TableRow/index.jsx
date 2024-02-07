@@ -45,6 +45,7 @@ export default function TableRow({
           value={value}
           onChange={handleChange}
           placeholder='0.00'
+          type='number'
         />
       </td>
       <td className='prices-table__body-cell table__body-cell table__cell'>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 
@@ -72,10 +72,10 @@ function App() {
     setIsMenuOpen(true);
   };
 
-  const closePopupWithProject = () => {
+  const closePopupWithProject = useCallback(() => {
     setIsPopupWithProjectOpened(false);
     navigate(-1);
-  };
+  }, [navigate]);
 
   const handleCardClick = (id, title, description, images) => {
     setCurrentProject({
@@ -145,6 +145,7 @@ function App() {
                 <Contacts
                   submitApplication={submitApplication}
                   submitStatus={submitStatus}
+                  setSubmitStatus={setSubmitStatus}
                   isFetching={isFetching}
                 />
               }

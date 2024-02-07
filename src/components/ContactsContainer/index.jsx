@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import { IconVk, IconYouTube } from '../Icons/Icons';
 
 export default function ContactsContainer() {
   return (
@@ -26,33 +27,26 @@ export default function ContactsContainer() {
             </ul>
           </li>
           <li className='contacts__item'>
-            <h3 className='contacts__item-title contacts__text section__text'>Мы в ВК</h3>
-            <ul className='contacts__sublist'>
-              <li className='contacts__sublist-item'>
+            <h3 className='contacts__item-title contacts__text section__text'>Мы в соцсетях:</h3>
+            <ul className='contacts__sublist contacts__sublist-with-logo'>
+              <li className='contacts__sublist-item contacts__sublist-item-with-logo'>
                 <a
-                  className='contacts__item-link contacts__text section__text link'
+                  className='contacts__item-link contacts__item-link-vk'
                   href='https://vk.com/vol_electro'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  https://vk.com/vol_electro
+                  <IconVk />
                 </a>
               </li>
-            </ul>
-          </li>
-          <li className='contacts__item'>
-            <h3 className='contacts__item-title contacts__text section__text'>
-              YouTube канал
-            </h3>
-            <ul className='contacts__sublist'>
-              <li className='contacts__sublist-item'>
+              <li className='contacts__sublist-item contacts__sublist-item-with-logo'>
                 <a
-                  className='contacts__item-link contacts__text section__text link'
+                  className='contacts__item-link contacts__item-link-youtube'
                   href='https://www.youtube.com/channel/UCCRyA8_pZAFZPhS7ynIhWCg'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  https://www.youtube.com/channel/UCCRyA8_pZAFZPhS7ynIhWCg
+                  <IconYouTube />
                 </a>
               </li>
             </ul>
