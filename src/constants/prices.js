@@ -1,7 +1,7 @@
 export const prices = [
   {
     id: 1,
-    title: 'Квартира из кирпича - от 1100 руб',
+    title: 'Квартира из кирпича - от 1200 руб',
     description: '',
     images: [
       {
@@ -14,7 +14,7 @@ export const prices = [
   },
   {
     id: 2,
-    title: 'Квартира из бетона - от 1300 руб',
+    title: 'Квартира из бетона - от 1500 руб',
     description:
       '',
     images: [
@@ -29,7 +29,7 @@ export const prices = [
 
   {
     id: 3,
-    title: 'Ретропроводка - от 1200 руб',
+    title: 'Ретропроводка - от 1300 руб',
     description:
       '',
     images: [
@@ -43,7 +43,7 @@ export const prices = [
   },
   {
     id: 4,
-    title: 'Скрытая проводка в дереве от 1300 руб',
+    title: 'Скрытая проводка в дереве от 1500 руб',
     description:
       '',
     images: [

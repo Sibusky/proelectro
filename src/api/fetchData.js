@@ -16,7 +16,7 @@ export function fetchCards(data) {
   }).then((res) => checkResponce(res));
 }
 
-// Fetch data from firebase
+// Fetch data from firebase (unused)
 export function fetchPriceList(collectionName) {
   const collectionRef = collection(db, collectionName);
 
