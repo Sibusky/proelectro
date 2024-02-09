@@ -1,3 +1,3 @@
 export const WEBSITE = 'ПроЭлектро';
 export const SEND = 'Отправить';
-export const LOADING = 'Загрузка...'
+export const LOADING = 'Отправка...'

@@ -21,7 +21,12 @@
 }
 
 .contacts__item-link {
-  text-decoration: underline;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 5px;
+  background-color: #c2c2c2;
+  border-radius: 14px;
 }
 
 .contacts__sublist-with-logo {

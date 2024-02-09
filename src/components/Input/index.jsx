@@ -28,8 +28,8 @@ export default function Input({
       </label>
       <div className='form__input-container'>
         <Tag
-          className={`section__text form__input${
-            errors[`${name}`] ? ' form__input-error' : ''
+          className={`section__text form__input form__input-${tagName}${
+            errors[`${name}`] ? ` form__input-error form__input-error-${tagName}` : ''
           }`}
           readOnly={isFetching && true}
           id={`form__input-${name}`}
@@ -43,9 +43,17 @@ export default function Input({
           maxLength={maxLength}
           required={isRequired}
         />
-        <span id={`error-form-${name}`} className='form__error'>
-          {errors[`${name}`]}
-        </span>
+        <div className='form__span-container'>
+          <span
+            id={`error-form-${name}`}
+            className='form__span-text form__error'
+          >
+            {errors[`${name}`]}
+          </span>
+          {name === 'message' && values[`${name}`] && (
+            <span className='form__span-text'>осталось {2000 - values[`${name}`].length} символов</span>
+          )}
+        </div>
       </div>
     </li>
   );

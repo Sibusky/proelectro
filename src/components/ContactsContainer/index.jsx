@@ -7,7 +7,7 @@ export default function ContactsContainer() {
     <section className='contacts section'>
       <div className='contacts__container section__container'>
         <h2 className='contacts__title section__title'>Контакты</h2>
-        <p className='contacts__text section__text'>Мы находимся в г. Вологде</p>
+        <p className='contacts__text section__text'>Находимся в Вологде</p>
         <ul className='contacts__list'>
           <li className='contacts__item'>
             <h3 className='contacts__item-title contacts__text section__text'>

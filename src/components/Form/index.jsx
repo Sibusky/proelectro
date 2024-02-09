@@ -8,7 +8,6 @@ export default function Form({
   isFetching,
   loadingMessage,
   buttonMessage,
-  submitStatus,
 }) {
   return (
     <form className='form' onSubmit={handleSubmit}>
