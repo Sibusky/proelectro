@@ -72,7 +72,7 @@ export default function ApplicationForm({
           <Input
             label='Телефон*'
             name='phone'
-            type='phone'
+            type='tel'
             placeholder='+79001231212'
             pattern='^(?:\+7|8)9\d{9}$'
             isRequired={true}

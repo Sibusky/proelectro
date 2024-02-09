@@ -27,9 +27,6 @@ table {
   background-color: #d1d1d1;
 }
 
-.table__row {
-}
-
 .table__cell {
   border: 1px solid lightgray;
   height: 26px;
@@ -39,12 +36,6 @@ table {
 .table__cell_wider {
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.table__head-cell {
-}
-
-.table__body {
 }
 
 .table__cell-result {
@@ -86,4 +77,14 @@ table {
   .prices-table__input {
     width: 35px;
   }
+}
+
+.prices-table__contacts {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 40px 0 !important;
+}
+
+.prices-table__contacts > a {
+  margin-right: 5px;
 }

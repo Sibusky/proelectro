@@ -87,10 +87,12 @@ export default function PricesTable() {
           <span>*</span> - данная таблица не является коммерческим пердложением.
           Рассчётная итоговая сумма определяется только на замерах.{' '}
         </p>
-        <p className='prices-table__reference section__text'>
-          <Button path={'/contacts'}>Свяжитесь</Button> с нами, чтобы узнать
-          подробнее.
-        </p>
+        <div className='prices-table__contacts section__text'>
+          <Button path={'/contacts'}>Свяжитесь</Button>
+          <p className='prices-table__reference section__text'>
+            с нами, чтобы узнать подробнее.
+          </p>
+        </div>
       </div>
     </section>
   );

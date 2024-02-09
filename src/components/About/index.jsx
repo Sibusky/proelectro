@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import aboutPhoto from '../../images/about-photo.jpeg';
+import aboutPhoto from '../../images/about-photo.webp';
 
 export default function About() {
   return (
