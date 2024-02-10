@@ -43,6 +43,7 @@ export default function Header({
                 : 'header__menu-btn button'
             }
             onClick={() => handleClick()}
+            aria-label="Вызов меню"
           >
             <svg
               width='44'

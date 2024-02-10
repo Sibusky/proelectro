@@ -12,6 +12,7 @@ export default function About() {
             className='about__photo'
             src={aboutPhoto}
             alt='Бригада ПроЭлектро'
+            loading='lazy'
           />
 
           <p className='about__text section__text'>

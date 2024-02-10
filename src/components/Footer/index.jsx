@@ -33,6 +33,7 @@ export default function Footer() {
                   href='https://t.me/Nektonikto'
                   target='_blank'
                   rel='noreferrer'
+                  aria-label="Связаться с ПроЭлектро через телеграм"
                 >
                   <IconTelegram />
                 </a>
@@ -43,6 +44,7 @@ export default function Footer() {
                   href='https://vk.com/vol_electro'
                   target='_blank'
                   rel='noreferrer'
+                  aria-label="Связаться с ПроЭлектро через группу в Вконтакте"
                 >
                   <IconVk />
                 </a>
@@ -53,6 +55,7 @@ export default function Footer() {
                   href='mailto:mkichigin1969@gmail.com'
                   target='_blank'
                   rel='noreferrer'
+                  aria-label="Связаться с ПроЭлектро через электронную почту"
                 >
                   <IconGmail />
                 </a>

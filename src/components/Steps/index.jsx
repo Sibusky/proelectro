@@ -9,7 +9,12 @@ export default function Steps() {
     <section className='steps section'>
       <div className='steps__container section__container'>
         <div className='steps__background'></div>
-        <img className='steps__image' src={stepsPhoto} alt='Три простых шага' />
+        <img
+          className='steps__image'
+          src={stepsPhoto}
+          alt='Три простых шага'
+          loading='lazy'
+        />
         <div className='steps__text-container'>
           <h3 className='steps__title section__title'>
             Три простых шага к новой электро&shy;проводке:
