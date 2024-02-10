@@ -25,7 +25,12 @@ export default function Carousel() {
     >
       {carouselImages.map((image) => (
         <SwiperSlide className='carousel__slide' key={image.src}>
-          <img className='carousel__image' src={image.src} alt={image.alt} />
+          <img
+            className='carousel__image'
+            srcSet={`${image.srcOneX} 800w, ${image.srcTwoX} 1200w, ${image.srcThreeX} 1600w`}
+            src={image.src}
+            alt={image.alt}
+          />
         </SwiperSlide>
       ))}
     </Swiper>

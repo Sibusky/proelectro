@@ -12,7 +12,7 @@ export const projects = [
         - Контактор для функции мастер-клавиши.
         - Возможность подключения генератора или ИБП.`,
         link: require('../images/projects/sloboda/01.jpg'),
-        preview: require('../images/projects/sloboda/preview/01.jpg'),
+        preview: require('../images/projects/sloboda/preview/01.webp'),
       },
       {
         id: 2,
@@ -105,7 +105,7 @@ export const projects = [
         caption:
           'В рамках проекта подготовлена монтажная схема щита, которая полностью соответствует фактически собранному оборудованию.',
         link: require('../images/projects/distribution-box/01.jpg'),
-        preview: require('../images/projects/distribution-box/preview/01.jpg'),
+        preview: require('../images/projects/distribution-box/preview/01.webp'),
       },
       {
         id: 2,
@@ -167,7 +167,7 @@ export const projects = [
         - Серая гофра для силовых цепей.
         - Синяя гофра для слаботочнной сети.`,
         link: require('../images/projects/yagodnaya/01.jpg'),
-        preview: require('../images/projects/yagodnaya/preview/01.jpg'),
+        preview: require('../images/projects/yagodnaya/preview/01.webp'),
       },
       {
         id: 2,
@@ -268,7 +268,7 @@ export const projects = [
         - достаточное количество УЗО,
         - наличие контактора для реализации функции мастер-клавиши`,
         link: require('../images/projects/pskovskaya/01.jpg'),
-        preview: require('../images/projects/pskovskaya/preview/01.jpg'),
+        preview: require('../images/projects/pskovskaya/preview/01.webp'),
       },
       {
         id: 2,
@@ -314,7 +314,7 @@ export const projects = [
         - проводка выполнена по потолку в гофре ПВХ (серая гофра для силовых цепей, синяя гофра для слаботочнной сети),
         - в каждом помещении установлено временное освещение и розетки для отделочников и плиточников.`,
         link: require('../images/projects/fryazinovskaya/01.jpg'),
-        preview: require('../images/projects/fryazinovskaya/preview/01.jpg'),
+        preview: require('../images/projects/fryazinovskaya/preview/01.webp'),
       },
       {
         id: 2,
@@ -400,7 +400,7 @@ export const projects = [
         - вся автоматика подписана,
         - все жилы отходящих линий промаркированы.`,
         link: require('../images/projects/timonino/01.jpg'),
-        preview: require('../images/projects/timonino/preview/01.jpg'),
+        preview: require('../images/projects/timonino/preview/01.webp'),
       },
       {
         id: 2,
@@ -473,7 +473,7 @@ export const projects = [
         id: 1,
         caption: 'Ретропроводка от производителя Bironi',
         link: require('../images/projects/retro/01.jpg'),
-        preview: require('../images/projects/retro/preview/01.jpg'),
+        preview: require('../images/projects/retro/preview/01.webp'),
       },
       {
         id: 2,
@@ -544,7 +544,7 @@ export const projects = [
         - Модуль дискретного в/в 4/4 24В PRO-Relay EKF PROxima (2 штуки),
         - Блок питания 24В DR-60W-24 EKF PROxima.`,
         link: require('../images/projects/yurovo/01.jpg'),
-        preview: require('../images/projects/yurovo/preview/01.jpg'),
+        preview: require('../images/projects/yurovo/preview/01.webp'),
       },
       {
         id: 2,
@@ -598,7 +598,7 @@ export const projects = [
         id: 1,
         caption: 'Высверливаем лунки под подрозетники.',
         link: require('../images/projects/wip/01.jpg'),
-        preview: require('../images/projects/wip/preview/01.jpg'),
+        preview: require('../images/projects/wip/preview/01.webp'),
       },
       {
         id: 2,
