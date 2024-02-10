@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/proelectro/static/css/main.f06cb71f.css",
+    "main.css": "/proelectro/static/css/main.0bbba3c9.css",
     "main.js": "/proelectro/static/js/main.813a45cb.js",
     "static/js/787.0ae25950.chunk.js": "/proelectro/static/js/787.0ae25950.chunk.js",
     "static/media/steps-photo.png": "/proelectro/static/media/steps-photo.e2d501460e64f50cf9a3.png",
@@ -59,12 +59,12 @@
     "static/media/icon-electric-scheme.png": "/proelectro/static/media/icon-electric-scheme.7f817f417ab405277f64.png",
     "static/media/icon-electric-panel.png": "/proelectro/static/media/icon-electric-panel.bb923978a97e6679d540.png",
     "index.html": "/proelectro/index.html",
-    "main.f06cb71f.css.map": "/proelectro/static/css/main.f06cb71f.css.map",
+    "main.0bbba3c9.css.map": "/proelectro/static/css/main.0bbba3c9.css.map",
     "main.813a45cb.js.map": "/proelectro/static/js/main.813a45cb.js.map",
     "787.0ae25950.chunk.js.map": "/proelectro/static/js/787.0ae25950.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f06cb71f.css",
+    "static/css/main.0bbba3c9.css",
     "static/js/main.813a45cb.js"
   ]
 }
