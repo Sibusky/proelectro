@@ -9,6 +9,12 @@
   width: 100%;
 }
 
+@media screen and (max-width: 500px) {
+  .form {
+    padding: 15px 20px;
+  }
+}
+
 .form__fieldset {
   border: none;
   padding: 0;

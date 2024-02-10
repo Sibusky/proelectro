@@ -6,12 +6,43 @@
   padding: 10px 0;
 }
 
+@media screen and (max-width: 400px) {
+  .form__input-item-textarea {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form__input-item-textarea > label {
+    margin-bottom: 10px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form__input-item-textarea > div > textarea {
+    width: calc(100% + 100px) !important;
+  }
+}
+
 .form__input-label {
   width: 140px;
 }
 
+@media screen and (max-width: 500px) {
+  .form__input-label {
+    width: 100px;
+  }
+}
+
 .form__input-container {
-  width: calc(100% - 150px);
+  width: calc(100% - 140px);
+}
+
+@media screen and (max-width: 500px) {
+  .form__input-container {
+    width: calc(100% - 100px);
+  }
 }
 
 .form__input {

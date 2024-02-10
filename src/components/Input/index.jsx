@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 
 export default function Input({
-  tagName,
+  tagName = 'input',
   label,
   name,
   type,
@@ -19,7 +19,7 @@ export default function Input({
   const Tag = tagName || 'input';
 
   return (
-    <li className='form__input-item'>
+    <li className={`form__input-item form__input-item-${tagName}`}>
       <label
         className='form__input-label section__text'
         htmlFor={`form__input-${name}`}
