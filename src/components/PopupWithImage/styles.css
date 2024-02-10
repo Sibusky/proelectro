@@ -1,0 +1,136 @@
+.popup__carousel {
+  padding: 0;
+  width: 100%;
+  height: 90vh;
+}
+
+.popup__carousel-slide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__carousel-slide {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.popup__carousel-slide-image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__carousel-slide-image-container {
+    width: 100%;
+    height: 70%;
+  }
+}
+
+.popup__carousel-image {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__carousel-image {
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.popup__carousel-image-caption-logo {
+  position: absolute;
+  bottom: 17px;
+  right: 17px;
+  background-image: url('../../images/logo.svg');
+  width: 170px;
+  height: 170px;
+  opacity: 0.2;
+}
+
+@media screen and (max-width: 1025px) {
+  .popup__carousel-image-caption-logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .popup__carousel-image-caption-logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .popup__carousel-image-caption-logo {
+    bottom: 8px;
+    right: 8px;
+  }
+}
+
+.popup__carousel-image-caption-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  padding: 20px;
+  height: 93%;
+  overflow-y: auto;
+}
+
+.popup__carousel-image-caption-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.popup__carousel-image-caption-container:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.popup__carousel-image-caption-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.popup__carousel-image-caption-container::-webkit-scrollbar-thumb {
+  opacity: 0;
+}
+
+.popup__carousel-image-caption-container:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__carousel-image-caption-container {
+    height: 30%;
+    width: 90%;
+  }
+}
+
+.popup__carousel-image-caption {
+  width: 100%;
+}
+
+.popup__carousel-image-caption:last-of-type {
+  margin: 0 0 auto 0;
+}
+
+

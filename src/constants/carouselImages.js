@@ -1,0 +1,58 @@
+export const carouselImages = [
+  {
+    src: require('../images/lead-img-1.webp'),
+    srcOneX: require('../images/lead-img-1-small.webp'),
+    srcTwoX: require('../images/lead-img-1-mid.webp'),
+    srcThreeX: require('../images/lead-img-1.webp'),
+    alt: 'Пример нашей работы',
+  },
+  {
+    src: require('../images/lead-img-2.webp'),
+    srcOneX: require('../images/lead-img-2-small.webp'),
+    srcTwoX: require('../images/lead-img-2-mid.webp'),
+    srcThreeX: require('../images/lead-img-2.webp'),
+    alt: 'Пример нашей работы',
+  },
+  {
+    src: require('../images/lead-img-3.webp'),
+    srcOneX: require('../images/lead-img-3-small.webp'),
+    srcTwoX: require('../images/lead-img-3-mid.webp'),
+    srcThreeX: require('../images/lead-img-3.webp'),
+    alt: 'Пример нашей работы',
+  },
+  {
+    src: require('../images/lead-img-4.webp'),
+    srcOneX: require('../images/lead-img-4-small.webp'),
+    srcTwoX: require('../images/lead-img-4-mid.webp'),
+    srcThreeX: require('../images/lead-img-4.webp'),
+    alt: 'Пример нашей работы',
+  },
+  {
+    src: require('../images/lead-img-5.webp'),
+    srcOneX: require('../images/lead-img-5-small.webp'),
+    srcTwoX: require('../images/lead-img-5-mid.webp'),
+    srcThreeX: require('../images/lead-img-5.webp'),
+    alt: 'Пример нашей работы',
+  },
+  {
+    src: require('../images/lead-img-6.webp'),
+    srcOneX: require('../images/lead-img-6-small.webp'),
+    srcTwoX: require('../images/lead-img-6-mid.webp'),
+    srcThreeX: require('../images/lead-img-6.webp'),
+    alt: 'Пример нашей работы',
+  },
+  {
+    src: require('../images/lead-img-7.webp'),
+    srcOneX: require('../images/lead-img-7-small.webp'),
+    srcTwoX: require('../images/lead-img-7-mid.webp'),
+    srcThreeX: require('../images/lead-img-7.webp'),
+    alt: 'Пример нашей работы',
+  },
+  {
+    src: require('../images/lead-img-8.webp'),
+    srcOneX: require('../images/lead-img-8-small.webp'),
+    srcTwoX: require('../images/lead-img-8-mid.webp'),
+    srcThreeX: require('../images/lead-img-8.webp'),
+    alt: 'Пример нашей работы',
+  },
+];

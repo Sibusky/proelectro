@@ -1,0 +1,62 @@
+.contacts__container {
+  align-items: flex-start;
+}
+
+.contacts__text {
+  line-height: 30px;
+}
+
+.contacts__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts__item {
+  padding: 10px 0;
+}
+
+.contacts__item-title {
+  font-weight: 700;
+}
+
+.contacts__item-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 5px;
+  background-color: #c2c2c2;
+  border-radius: 14px;
+}
+
+.contacts__sublist-with-logo {
+  list-style: none;
+  display: flex;
+  margin-top: 20px;
+}
+
+.contacts__sublist-item-with-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.contacts__sublist-item-with-logo:hover {
+  fill: red;
+}
+
+.contacts__sublist-item-with-logo:last-of-type {
+  margin-right: 0;
+}
+
+.contacts__item-link > svg {
+  transition: all 0.3s ease-out;
+}
+
+.contacts__item-link-vk:hover > svg {
+  fill: #0077ff;
+}
+
+.contacts__item-link-youtube:hover > svg {
+  fill: #ff0000;
+}

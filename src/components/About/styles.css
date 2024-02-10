@@ -1,0 +1,39 @@
+.about__text-container {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .about__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.about__photo {
+  float: right;
+  width: 400px;
+  height: 100%;
+  margin: 0 0 10px 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .about__photo {
+    width: 300px;
+    margin: 0 0 8px 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about__photo {
+    float: none;
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+}
+
+.about__text {
+  text-indent: 20px;
+}
