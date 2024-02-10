@@ -15,7 +15,7 @@
 .about__photo {
   float: right;
   width: 400px;
-  height: auto;
+  height: 100%;
   margin: 0 0 10px 20px;
 }
 
