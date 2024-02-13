@@ -3,18 +3,20 @@ import { NavLink } from 'react-router-dom';
 import './styles.css';
 
 export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
+  const breakpoint = 1001;
+
   return (
     <nav className='navigation'>
       <ul
         className={
-          windowSize < 1000
+          windowSize < breakpoint
             ? 'navigation__list navigation__list_menu'
             : 'navigation__list'
         }
       >
         <li
           className='navigation__list-item'
-          onClick={() => windowSize < 880 && setIsMenuOpen(false)}
+          onClick={() => windowSize < breakpoint && setIsMenuOpen(false)}
         >
           <NavLink
             to='/'
@@ -29,7 +31,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
         </li>
         <li
           className='navigation__list-item'
-          onClick={() => windowSize < 880 && setIsMenuOpen(false)}
+          onClick={() => windowSize < breakpoint && setIsMenuOpen(false)}
         >
           <NavLink
             to='/references'
@@ -44,7 +46,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
         </li>
         <li
           className='navigation__list-item'
-          onClick={() => windowSize < 880 && setIsMenuOpen(false)}
+          onClick={() => windowSize < breakpoint && setIsMenuOpen(false)}
         >
           <NavLink
             to='/prices'
@@ -59,7 +61,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
         </li>
         <li
           className='navigation__list-item'
-          onClick={() => windowSize < 880 && setIsMenuOpen(false)}
+          onClick={() => windowSize < breakpoint && setIsMenuOpen(false)}
         >
           <NavLink
             to='/videos'
@@ -74,7 +76,7 @@ export default function HeaderNavigation({ windowSize, setIsMenuOpen }) {
         </li>
         <li
           className='navigation__list-item'
-          onClick={() => windowSize < 880 && setIsMenuOpen(false)}
+          onClick={() => windowSize < breakpoint && setIsMenuOpen(false)}
         >
           <NavLink
             to='/contacts'
