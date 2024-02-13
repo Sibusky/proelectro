@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import HeaderNavigation from '../HeaderNavigation';
-import IconMenuOpen from '../../Icons/Icons';
+import { IconMenuOpen } from '../../Icons/Icons';
 
 export default function MenuModal({ isMenuOpen, setIsMenuOpen, windowSize }) {
   return (
