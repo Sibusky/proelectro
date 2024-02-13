@@ -2,7 +2,7 @@
 
 A commercial project aimed at developing a Single Page Application (SPA) for an electrical installation company.
 
-The website is accessible via the following link: https://sibusky.github.io/proelectro/
+The website is accessible via the following link: https://электрик-вологда.рф
 
 Project features:
 
@@ -15,7 +15,7 @@ Project features:
 
 Коммерческий проект по разработке SPA для электромонтажной компании.
 
-Сайт доступен по ссылке: https://sibusky.github.io/proelectro/
+Сайт доступен по ссылке: https://электрик-вологда.рф
 
 Особенности проекта:
 
