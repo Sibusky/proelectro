@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../Logo';
 import './styles.css';
 import HeaderNavigation from './HeaderNavigation';
+import { IconMenuClose } from '../Icons/Icons';
 
 export default function Header({
   windowSize,
@@ -43,34 +44,9 @@ export default function Header({
                 : 'header__menu-btn button'
             }
             onClick={() => handleClick()}
-            aria-label="Вызов меню"
+            aria-label='Вызов меню'
           >
-            <svg
-              width='44'
-              height='44'
-              viewBox='0 0 44 44'
-              fill='2E3D41'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                fillRule='evenodd'
-                clipRule='evenodd'
-                d='M36 14L8 14V11L36 11V14Z'
-                fill='#2E3D41'
-              />
-              <path
-                fillRule='evenodd'
-                clipRule='evenodd'
-                d='M36 24L8 24V21L36 21V24Z'
-                fill='2E3D41'
-              />
-              <path
-                fillRule='evenodd'
-                clipRule='evenodd'
-                d='M36 34L8 34V31L36 31V34Z'
-                fill='2E3D41'
-              />
-            </svg>
+            <IconMenuClose />
           </button>
         )}
       </div>
