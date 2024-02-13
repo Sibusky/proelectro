@@ -1,3 +1,4 @@
+/* global ym */
 import React, { useState, useEffect, useCallback } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import debounce from 'lodash.debounce';
@@ -18,6 +19,9 @@ import PageNotFound from './pages/page-not-found';
 import { postNewApplication } from './api/fetchData';
 
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [windowSize, setWindowSize] = useState(
     document.documentElement.clientWidth
   );
@@ -39,9 +43,7 @@ function App() {
   const [submitStatus, setSubmitStatus] = useState('');
   const [isFetching, setIsFetching] = useState(false);
   const [scroll, setScroll] = useState(window.scrollY);
-
-  const location = useLocation();
-  const navigate = useNavigate();
+  const [currentPathname, setCurrentPathname] = useState(location.pathname);
 
   const handleScroll = debounce(() => {
     setScroll(window.scrollY);
@@ -67,6 +69,14 @@ function App() {
       setIsPopupWithPhotoOpened(false);
     }
   }, [location]);
+
+  //Yandex metrics
+  useEffect(() => {
+    if (currentPathname !== location.pathname) {
+      ym(96456512, 'hit', location.pathname);
+    }
+    setCurrentPathname(location.pathname);
+  }, [location.pathname, currentPathname]);
 
   const handleMenuButtonClick = () => {
     setIsMenuOpen(true);
