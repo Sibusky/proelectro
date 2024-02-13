@@ -1,5 +1,5 @@
 import React from 'react';
-import stepsPhoto from '../../images/steps-photo.png';
+import stepsPhoto from '../../images/steps-photo.webp';
 
 import './styles.css';
 import Button from '../Button';
