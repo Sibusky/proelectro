@@ -14,7 +14,7 @@ export default function Projects({ handleClick }) {
   return (
     <section className='projects section'>
       <div className='projects__container section__container'>
-        <h2 className='projects__title section__title'>Выполненные проекты</h2>
+        <h2 className='projects__title section__title'>Примеры работ</h2>
         {isFetching ? (
           <Spinner />
         ) : (
