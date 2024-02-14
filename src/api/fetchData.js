@@ -32,6 +32,16 @@ export function fetchPriceList(collectionName) {
     );
 }
 
+// GET request to check if server is ready
+export function isReady() {
+  return fetch(`${baseUrl}/`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((res) => checkResponce(res));
+}
+
 // POST new application
 export function postNewApplication(application) {
   return fetch(`${baseUrl}/submit`, {

@@ -16,7 +16,7 @@ import Prices from './pages/prices';
 import Contacts from './pages/contacts';
 import Videos from './pages/videos';
 import PageNotFound from './pages/page-not-found';
-import { postNewApplication } from './api/fetchData';
+import { isReady, postNewApplication } from './api/fetchData';
 
 function App() {
   const location = useLocation();
@@ -44,6 +44,7 @@ function App() {
   const [isFetching, setIsFetching] = useState(false);
   const [scroll, setScroll] = useState(window.scrollY);
   const [currentPathname, setCurrentPathname] = useState(location.pathname);
+  const [isServerReady, setIsServerReady] = useState(false);
 
   const handleScroll = debounce(() => {
     setScroll(window.scrollY);
@@ -72,11 +73,21 @@ function App() {
 
   //Yandex metrics
   useEffect(() => {
-    if (currentPathname !== location.pathname) {
+    if (
+      currentPathname !== location.pathname &&
+      process.env.REACT_APP_MODE !== 'develop'
+    ) {
       ym(96456512, 'hit', location.pathname);
     }
     setCurrentPathname(location.pathname);
   }, [location.pathname, currentPathname]);
+
+  // Check if server is ready to take form application
+  useEffect(() => {
+    isReady().then((res) =>
+      res.ok ? setIsServerReady(true) : setIsServerReady(false)
+    );
+  }, []);
 
   const handleMenuButtonClick = () => {
     setIsMenuOpen(true);
@@ -157,6 +168,7 @@ function App() {
                   submitStatus={submitStatus}
                   setSubmitStatus={setSubmitStatus}
                   isFetching={isFetching}
+                  isServerReady={isServerReady}
                 />
               }
             />

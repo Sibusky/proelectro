@@ -8,7 +8,9 @@ export default function Form({
   isFetching,
   loadingMessage,
   buttonMessage,
+  isServerReady,
 }) {
+  const isButtonDisabled = !isValid || isFetching || !isServerReady;
   return (
     <form className='form' onSubmit={handleSubmit}>
       <fieldset className='form__fieldset'>
@@ -17,9 +19,9 @@ export default function Form({
           <small>* поля, отмеченные звёздочкой, обязательны к заполнению</small>
         </p>
         <button
-          disabled={!isValid || isFetching}
+          disabled={isButtonDisabled}
           className={
-            !isValid || isFetching
+            isButtonDisabled
               ? 'form__submit-button form__submit-button_disabled section__text'
               : 'form__submit-button button section__text'
           }

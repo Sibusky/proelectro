@@ -9,7 +9,7 @@ Project features:
 - Stack: React, JS, HTML, CSS;
 - Swiper library for slide displays showcasing examples of work on the main page;
 - VK kupiapp for loading reviews about the company's work from a VK group;
-- The feedback form operates on a separately developed server using Node.js, [link](https://github.com/Sibusky/send-an-email);
+- The feedback form operates on a separately developed server using Node.js, [link](https://github.com/Sibusky/send-an-email).
 
 # Сайт для электромонтажной компании ПроЭлектро.
 
@@ -22,4 +22,4 @@ Project features:
 - Стек: React, JS, HTML, CSS;
 - Библиотека Swiper для слайдов пример работ на главной странице;
 - VK kupiapp для загрузки отзывов о работе из группы в ВК;
-- Форма обратной связи работает на отдельно написаном сервере на Node.js, [ссылка на код](https://github.com/Sibusky/send-an-email);
+- Форма обратной связи работает на отдельно написаном сервере на Node.js, [ссылка на код](https://github.com/Sibusky/send-an-email).
