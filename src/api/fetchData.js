@@ -1,7 +1,6 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../constants/firebaseConfig';
-
-const baseUrl = 'https://send-an-email.onrender.com';
+const { REACT_APP_BASE_URL } = process.env;
 
 function checkResponce(res) {
   return res ? res : Promise.reject(res, 'Ошибка загрузки данных');
@@ -32,19 +31,9 @@ export function fetchPriceList(collectionName) {
     );
 }
 
-// GET request to check if server is ready
-export function isReady() {
-  return fetch(`${baseUrl}/`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then((res) => checkResponce(res));
-}
-
 // POST new application
 export function postNewApplication(application) {
-  return fetch(`${baseUrl}/submit`, {
+  return fetch(`${REACT_APP_BASE_URL}/submit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

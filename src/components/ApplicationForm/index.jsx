@@ -12,7 +12,6 @@ export default function ApplicationForm({
   submitStatus,
   setSubmitStatus,
   isFetching,
-  isServerReady,
 }) {
   const [values, errors, isValid, handleChange, resetForm] =
     useFormWithValidation();
@@ -44,7 +43,6 @@ export default function ApplicationForm({
           loadingMessage={LOADING}
           buttonMessage={SEND}
           submitStatus={submitStatus}
-          isServerReady={isServerReady}
         >
           <Input
             label='Имя*'
