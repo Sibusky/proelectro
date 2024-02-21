@@ -8,9 +8,8 @@ export default function Form({
   isFetching,
   loadingMessage,
   buttonMessage,
-  isServerReady,
 }) {
-  const isButtonDisabled = !isValid || isFetching || !isServerReady;
+  const isButtonDisabled = !isValid || isFetching;
   return (
     <form className='form' onSubmit={handleSubmit}>
       <fieldset className='form__fieldset'>

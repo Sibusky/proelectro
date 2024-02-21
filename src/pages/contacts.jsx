@@ -7,7 +7,6 @@ export default function Contacts({
   submitStatus,
   setSubmitStatus,
   isFetching,
-  isServerReady,
 }) {
   return (
     <main className='main'>
@@ -17,7 +16,6 @@ export default function Contacts({
         submitStatus={submitStatus}
         setSubmitStatus={setSubmitStatus}
         isFetching={isFetching}
-        isServerReady={isServerReady}
       />
     </main>
   );
