@@ -84,8 +84,8 @@ export default function PricesTable() {
           </tbody>
         </table>
         <p className='prices-table__reference section__text'>
-          <span>*</span> - данная таблица не является коммерческим пердложением.
-          Рассчётная итоговая сумма определяется только на замерах.{' '}
+          <span>*</span> - данная таблица не является коммерческим предложением.
+          Расчётная итоговая сумма определяется только на замерах.{' '}
         </p>
         <div className='prices-table__contacts section__text'>
           <Button path={'/contacts'}>Свяжитесь</Button>
